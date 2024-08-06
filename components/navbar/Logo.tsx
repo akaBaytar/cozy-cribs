@@ -8,7 +8,9 @@ const Logo = () => {
   return (
     <Button size='icon' variant='link' asChild>
       <Link href='/'>
-        <Image src={CozyCribs} width={36} height={36} alt='Home Page - CozyCribs' />
+        <div className='w-8 h-8 relative'>
+          <Image src={CozyCribs} alt='Home page - CozyCribs' fill />
+        </div>
       </Link>
     </Button>
   );

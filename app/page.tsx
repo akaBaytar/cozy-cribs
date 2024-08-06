@@ -1,5 +1,5 @@
 const Home = () => {
-  return <h1 className='text-xl'>CozyCribs</h1>;
+  return <section>Home Page</section>;
 };
 
 export default Home;
