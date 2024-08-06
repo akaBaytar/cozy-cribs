@@ -1,9 +1,11 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Poppins } from 'next/font/google';
 import './globals.css';
+
+import Providers from './providers';
 import Navbar from '@/components/navbar/Navbar';
 
-const inter = Inter({ subsets: ['latin'] });
+const poppins = Poppins({ subsets: ['latin'], weight: ['400'] });
 
 export const metadata: Metadata = {
   title: 'CozyCribs',
@@ -18,9 +20,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={inter.className}>
-        <Navbar/>
-        <main className='container py-10'>{children}</main>
+      <body className={poppins.className}>
+        <Providers>
+          <Navbar />
+          <main className='container py-10'>{children}</main>
+        </Providers>
       </body>
     </html>
   );
