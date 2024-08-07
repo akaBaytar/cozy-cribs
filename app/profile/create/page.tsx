@@ -2,18 +2,14 @@ import FormContainer from '@/components/form/FormContainer';
 import FormInput from '@/components/form/FormInput';
 
 import { SubmitButton } from '@/components/form/Buttons';
-
-const createProfileAction = async (prevState: any, formData: FormData) => {
-  'use server';
-  return { message: 'Profile created successfully.' };
-};
+import { createProfile } from '@/utils/actions';
 
 const CreateProfile = () => {
   return (
     <section>
       <h1 className='text-2xl font-semibold mb-8'>New User</h1>
       <div className='border p-8 rounded-md'>
-        <FormContainer action={createProfileAction}>
+        <FormContainer action={createProfile}>
           <div className='grid md:grid-cols-2 gap-4 md:gap-x-8 mt-4'>
             <FormInput
               type='text'
