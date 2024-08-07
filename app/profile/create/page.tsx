@@ -2,7 +2,7 @@ import FormContainer from '@/components/form/FormContainer';
 import FormInput from '@/components/form/FormInput';
 
 import { SubmitButton } from '@/components/form/Buttons';
-import { createProfile } from '@/utils/actions';
+import { createProfile } from '@/actions/createProfile';
 
 const CreateProfile = () => {
   return (

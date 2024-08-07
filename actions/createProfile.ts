@@ -1,15 +1,14 @@
 'use server';
 
 import { redirect } from 'next/navigation';
-import { revalidatePath } from 'next/cache';
 
 import { ZodError } from 'zod';
-import { auth, clerkClient, currentUser } from '@clerk/nextjs/server';
+import { clerkClient, currentUser } from '@clerk/nextjs/server';
 
-import prisma from './database';
-import { profileSchema } from './schemas';
+import prisma from '@/utils/database';
+import { profileSchema } from '@/utils/schemas';
 
-export const createProfile = async (prevState: any, formData: FormData) => {
+export const createProfile = async (_: any, formData: FormData) => {
   try {
     const user = await currentUser();
 
