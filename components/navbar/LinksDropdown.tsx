@@ -5,6 +5,12 @@ import SignOut from './SignOut';
 
 import { links } from '@/utils/links';
 
+import {
+  SignedOut,
+  SignedIn,
+  SignInButton,
+  SignUpButton,
+} from '@clerk/nextjs';
 import { LuAlignLeft } from 'react-icons/lu';
 import { Button } from '../ui/button';
 import {
@@ -25,11 +31,29 @@ const LinksDropdown = () => {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align='end' className='w-[148px]'>
-        {links.map(({ href, label }) => (
-          <DropdownMenuItem key={href}>
-            <Link href={href}>{label}</Link>
+        <SignedOut>
+          <DropdownMenuItem>
+            <SignInButton mode='modal'>
+              <button className='w-full text-left'>Login</button>
+            </SignInButton>
           </DropdownMenuItem>
-        ))}
+          <DropdownMenuItem>
+            <SignUpButton mode='modal'>
+              <button className='w-full text-left'>Register</button>
+            </SignUpButton>
+          </DropdownMenuItem>
+        </SignedOut>
+        <SignedIn>
+          {links.map(({ href, label }) => (
+            <DropdownMenuItem key={href}>
+              <Link href={href} className='w-full'>{label}</Link>
+            </DropdownMenuItem>
+          ))}
+          <DropdownMenuSeparator />
+          <DropdownMenuItem>
+            <SignOut />
+          </DropdownMenuItem>
+        </SignedIn>
       </DropdownMenuContent>
     </DropdownMenu>
   );
