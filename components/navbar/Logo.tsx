@@ -9,7 +9,7 @@ const Logo = () => {
     <Button size='icon' variant='link' asChild>
       <Link href='/'>
         <div className='w-8 h-8 relative'>
-          <Image src={CozyCribs} alt='Home page - CozyCribs' fill />
+          <Image src={CozyCribs} alt='Home page - CozyCribs' />
         </div>
       </Link>
     </Button>
