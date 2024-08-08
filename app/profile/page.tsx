@@ -22,7 +22,7 @@ const Profile = async () => {
           action={updateAvatar}
         />
         <FormContainer action={updateProfile}>
-          <div className='grid gap-[22px] w-full'>
+          <div className='grid gap-[18.5px] w-full'>
             <FormInput
               type='text'
               name='firstName'

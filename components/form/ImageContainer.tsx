@@ -33,7 +33,7 @@ const ImageContainer = (props: ImageContainerProps) => {
           alt={name}
           width={600}
           height={600}
-          className='rounded object-cover mb-4 w-full sm:h-[240px] sm:w-[240px]'
+          className='rounded object-cover mb-[12px] mt-[6px] w-full sm:h-[238px] sm:w-[238px]'
         />
       ) : (
         <LuUser2 className='w-24 h-24 bg-primary rounded text-white mb-4' />
