@@ -20,6 +20,7 @@ const FormInput = (props: FormInputProps) => {
         id={name}
         name={name}
         type={type}
+        className='mt-1'
         placeholder={placeholder}
         autoComplete={autoComplete}
         defaultValue={defaultValue}
