@@ -3,16 +3,15 @@
 import { redirect } from 'next/navigation';
 
 import { ZodError } from 'zod';
-import { clerkClient, currentUser } from '@clerk/nextjs/server';
+import { clerkClient } from '@clerk/nextjs/server';
 
 import prisma from '@/utils/database';
 import { profileSchema } from '@/utils/schemas';
+import { getAuthUser } from '@/helpers/getAuthUser';
 
 export const createProfile = async (_: any, formData: FormData) => {
   try {
-    const user = await currentUser();
-
-    if (!user) throw new Error('Please login.');
+    const user = await getAuthUser();
 
     const rawData = Object.fromEntries(formData);
     const validatedFields = profileSchema.parse(rawData);

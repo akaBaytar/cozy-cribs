@@ -1,10 +1,17 @@
+import { redirect } from 'next/navigation';
+import { currentUser } from '@clerk/nextjs/server';
+
 import FormContainer from '@/components/form/FormContainer';
 import FormInput from '@/components/form/FormInput';
 
 import { SubmitButton } from '@/components/form/Buttons';
 import { createProfile } from '@/actions/createProfile';
 
-const CreateProfile = () => {
+const CreateProfile = async () => {
+  const user = await currentUser();
+
+  if (user?.privateMetadata.hasProfile) redirect('/');
+
   return (
     <section>
       <h1 className='text-2xl font-semibold mb-8'>New User</h1>
@@ -28,6 +35,7 @@ const CreateProfile = () => {
               name='email'
               label='Email'
               autoComplete='email'
+              defaultValue={user?.emailAddresses[0].emailAddress}
             />
             <SubmitButton text='Create a Profile' className='mt-6 h-9 w-full' />
           </div>
