@@ -1,8 +1,30 @@
-'use server'
+'use server';
+
+import { revalidatePath } from 'next/cache';
+
+import prisma from '@/utils/database';
+import { getAuthUser } from '@/helpers/getAuthUser';
+import { profileSchema } from '@/utils/schemas';
+import { renderError } from '@/helpers/renderError';
 
 export const updateProfile = async (_: any, formData: FormData) => {
+  const user = await getAuthUser();
 
-  
+  try {
+    const rawData = Object.fromEntries(formData);
+    const validatedFields = profileSchema.parse(rawData);
 
-  return { message: 'TODO --- UPDATE PROFILE' };
+    await prisma.profile.update({
+      where: {
+        clerkId: user.id,
+      },
+      data: validatedFields,
+    });
+
+    revalidatePath('/profile');
+
+    return { message: 'Profile updated successfully.' };
+  } catch (error) {
+    return renderError(error);
+  }
 };

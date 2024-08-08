@@ -1,13 +1,12 @@
 'use server';
 
 import { redirect } from 'next/navigation';
-
-import { ZodError } from 'zod';
 import { clerkClient } from '@clerk/nextjs/server';
 
 import prisma from '@/utils/database';
 import { profileSchema } from '@/utils/schemas';
 import { getAuthUser } from '@/helpers/getAuthUser';
+import { renderError } from '@/helpers/renderError';
 
 export const createProfile = async (_: any, formData: FormData) => {
   try {
@@ -32,11 +31,7 @@ export const createProfile = async (_: any, formData: FormData) => {
       },
     });
   } catch (error) {
-    let message = 'An error occurred.';
-
-    if (error instanceof ZodError) message = error.errors[0].message;
-
-    return { message };
+    renderError(error);
   }
 
   redirect('/');
