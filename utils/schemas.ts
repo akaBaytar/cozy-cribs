@@ -2,18 +2,18 @@ import { z } from 'zod';
 
 const validateFile = () => {
   const maxSize = 1024 * 1024; // 1MB
-  const acceptedFileTypes = ['image/*'];
+  const acceptedFileTypes = ['image/'];
 
   return z
     .instanceof(File)
     .refine((file) => {
       return !file || file.size <= maxSize;
-    }, 'File size must be less than 1MB.')
+    }, 'File size must be less than 1 MB.')
     .refine((file) => {
       return (
         !file || acceptedFileTypes.some((type) => file.type.startsWith(type))
       );
-    }, 'File must be an proper image.');
+    }, 'File must be an image.');
 };
 
 export const profileSchema = z.object({
