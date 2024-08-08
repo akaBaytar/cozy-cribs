@@ -3,7 +3,7 @@ import { redirect } from 'next/navigation';
 import prisma from '@/utils/database';
 import { getAuthUser } from '@/helpers/getAuthUser';
 
-const fetchProfile = async () => {
+export const fetchProfile = async () => {
   const user = await getAuthUser();
 
   const profile = await prisma.profile.findUnique({
