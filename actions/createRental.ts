@@ -1,6 +1,11 @@
 'use server';
 
-import { propertySchema } from '@/utils/schemas';
+import { redirect } from 'next/navigation';
+
+import prisma from '@/utils/database';
+import { imageSchema, propertySchema } from '@/utils/schemas';
+import { uploadImage } from '@/utils/supabase';
+
 import { getAuthUser } from '@/helpers/getAuthUser';
 import { validateFields } from '@/helpers/validateFields';
 import { renderError } from '@/helpers/renderError';
@@ -10,9 +15,22 @@ export const createRental = async (_: any, formData: FormData) => {
     const user = await getAuthUser();
 
     const rawData = Object.fromEntries(formData);
-    const validatedFields = validateFields(propertySchema, rawData);
+    const file = formData.get('image') as File;
 
-    return { message: 'Property created successfully.' };
+    const validatedFields = validateFields(propertySchema, rawData);
+    const validatedFile = validateFields(imageSchema, { image: file });
+
+    const path = await uploadImage(validatedFile.image);
+
+    await prisma.property.create({
+      data: {
+        ...validatedFields,
+        image: path,
+        profileId: user.id,
+      },
+    });
+
+    redirect('/');
   } catch (error) {
     return renderError(error);
   }
