@@ -5,6 +5,7 @@ import './globals.css';
 
 import Providers from './providers';
 import Navbar from '@/components/navbar/Navbar';
+import Footer from '@/components/footer/Footer';
 
 import { ClerkProvider } from '@clerk/nextjs';
 
@@ -27,7 +28,8 @@ export default function RootLayout({
         <body className={poppins.className}>
           <Providers>
             <Navbar />
-            <main className='container py-10'>{children}</main>
+            <main className='container py-10 min-h-[55vh]'>{children}</main>
+            <Footer />
           </Providers>
         </body>
       </html>
