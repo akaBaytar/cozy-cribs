@@ -8,6 +8,7 @@ import TextAreaInput from '@/components/form/TextAreaInput';
 import CountriesInput from '@/components/form/CountriesInput';
 import ImageInput from '@/components/form/ImageInput';
 import CounterInput from '@/components/form/CounterInput';
+import AmenitiesInput from '@/components/form/AmenitiesInput';
 
 import { createRental } from '@/actions/createRental';
 
@@ -15,7 +16,7 @@ const CreateRentals = () => {
   return (
     <section>
       <h1 className='text-2xl font-semibold mb-8'>Create a Rental</h1>
-      <div className='border p-8 rounded'>
+      <div className='border p-8 rounded-md'>
         <h3 className='text-lg mb-4 font-medium'>General Info</h3>
         <FormContainer action={createRental}>
           <div className='grid md:grid-cols-2 gap-4 mb-4'>
@@ -36,10 +37,12 @@ const CreateRentals = () => {
           <CounterInput detail='bedrooms' />
           <CounterInput detail='beds' />
           <CounterInput detail='baths' />
+          <h3 className='text-lg mb-4 mt-8 font-medium'>Amenities</h3>
+          <AmenitiesInput />
           <SubmitButton
             size='lg'
             text='Create a Rental'
-            className='w-full mt-12'
+            className='w-full mt-16'
           />
         </FormContainer>
       </div>
