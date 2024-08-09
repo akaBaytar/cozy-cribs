@@ -12,14 +12,14 @@ import { categories } from '@/utils/categories';
 const CategoriesInput = ({ defaultValue }: { defaultValue?: string }) => {
   return (
     <div className='mb-2'>
-      <Label htmlFor='category' className='mb-1'>
+      <Label htmlFor='category'>
         Categories
       </Label>
       <Select
         defaultValue={defaultValue || categories[0].label}
         name='category'
         required>
-        <SelectTrigger id='category'>
+        <SelectTrigger id='category' className='mt-1'>
           <SelectValue />
         </SelectTrigger>
         <SelectContent>

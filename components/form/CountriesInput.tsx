@@ -12,14 +12,12 @@ import { countries } from '@/utils/countries';
 const CountriesInput = ({ defaultValue }: { defaultValue?: string }) => {
   return (
     <div className='mb-2'>
-      <Label htmlFor='country' className='mb-1'>
-        Country
-      </Label>
+      <Label htmlFor='country'>Country</Label>
       <Select
         name='country'
         defaultValue={defaultValue || countries[0].code}
         required>
-        <SelectTrigger id='country'>
+        <SelectTrigger id='country' className='mt-1'>
           <SelectValue />
         </SelectTrigger>
         <SelectContent>

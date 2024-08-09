@@ -27,13 +27,15 @@ const CreateRentals = () => {
           <TextAreaInput name='description' />
           <div className='grid md:grid-cols-2 gap-4 mb-4'>
             <CountriesInput />
-            <ImageInput label='Image' className='cursor-pointer' />
+            <ImageInput label='Image' className='cursor-pointer mt-1' />
           </div>
-          <h3 className='text-lg mb-4 mt-8 font-medium'>Accommodation Details</h3>
-          <CounterInput detail='guests'/>
-          <CounterInput detail='bedrooms'/>
-          <CounterInput detail='beds'/>
-          <CounterInput detail='baths'/>
+          <h3 className='text-lg mb-4 mt-8 font-medium'>
+            Accommodation Details
+          </h3>
+          <CounterInput detail='guests' />
+          <CounterInput detail='bedrooms' />
+          <CounterInput detail='beds' />
+          <CounterInput detail='baths' />
           <SubmitButton
             size='lg'
             text='Create a Rental'
