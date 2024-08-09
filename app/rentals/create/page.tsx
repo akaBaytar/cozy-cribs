@@ -4,6 +4,9 @@ import { SubmitButton } from '@/components/form/Buttons';
 
 import PriceInput from '@/components/form/PriceInput';
 import CategoriesInput from '@/components/form/CategoriesInput';
+import TextAreaInput from '@/components/form/TextAreaInput';
+import CountriesInput from '@/components/form/CountriesInput';
+import ImageInput from '@/components/form/ImageInput';
 
 import { createRental } from '@/actions/createRental';
 
@@ -17,8 +20,13 @@ const CreateRentals = () => {
           <div className='grid md:grid-cols-2 gap-4 mb-4'>
             <FormInput name='name' type='text' label='Name' />
             <FormInput name='tagline' type='text' label='Tagline' />
-            <PriceInput/>
-            <CategoriesInput/>
+            <PriceInput />
+            <CategoriesInput />
+          </div>
+          <TextAreaInput name='description' />
+          <div className='grid md:grid-cols-2 gap-4 mb-4'>
+            <CountriesInput />
+            <ImageInput label='Image'/>
           </div>
           <SubmitButton
             size='lg'
