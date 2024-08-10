@@ -25,7 +25,7 @@ const PropertyCard = ({ property }: { property: PropTypes }) => {
         </div>
         <div className='flex justify-between items-center'>
           <h3 className='text-sm font-semibold mt-1'>{name}</h3>
-          {/* TODO ====> RATING COMPONENT HERE */}
+          <PropertyRating id={id} inPage={false} />
         </div>
         <p className='text-xs mt-1 text-muted-foreground'>
           {tagline.length > 45 ? `${tagline.substring(0, 42)}...` : tagline}
