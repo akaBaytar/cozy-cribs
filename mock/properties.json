@@ -1,0 +1,724 @@
+[
+  {
+    "name": "Mountain View Glamping Tent",
+    "tagline": "Wake Up to the Majestic Peaks",
+    "price": "$120/night",
+    "category": "Tent",
+    "country": "Switzerland",
+    "description": "Experience the magic of the Swiss Alps from our cozy glamping tent. Nestled among towering peaks, this tent offers breathtaking views, a comfortable queen-sized bed, and a private deck. Equipped with solar-powered lighting, Wi-Fi, and a small kitchenette. Perfect for adventurers seeking a serene escape.",
+    "accommodation": {
+      "bedrooms": 1,
+      "beds": 1,
+      "bath": 1,
+      "guests": 2
+    },
+    "amenities": [
+      "Kitchenette",
+      "Private Bathroom",
+      "Hot Shower",
+      "Bed Linens",
+      "Towels",
+      "Outdoor Furniture",
+      "Picnic Table",
+      "Solar Power",
+      "Wi-Fi"
+    ]
+  },
+  {
+    "name": "Serene Desert Tent",
+    "tagline": "Under the Starry Skies of Wadi Rum",
+    "price": "$95/night",
+    "category": "Tent",
+    "country": "Jordan",
+    "description": "Stay under the stars in our traditional Bedouin-style tent in Wadi Rum. Surrounded by the stunning red sands, this tent provides an authentic desert experience with modern comforts like a queen-sized bed, a private seating area, and Wi-Fi. Ideal for couples seeking adventure and tranquility.",
+    "accommodation": {
+      "bedrooms": 1,
+      "beds": 1,
+      "bath": 1,
+      "guests": 2
+    },
+    "amenities": [
+      "Private Bathroom",
+      "Hot Shower",
+      "Bed Linens",
+      "Towels",
+      "Outdoor Furniture",
+      "Cool Box",
+      "Wi-Fi"
+    ]
+  },
+  {
+    "name": "Forest Retreat Tent",
+    "tagline": "A Woodland Escape",
+    "price": "$110/night",
+    "category": "Tent",
+    "country": "USA",
+    "description": "Reconnect with nature in our forest retreat tent. Located in a secluded woodland area, this tent offers two comfortable queen beds, a wood stove, and a small kitchenette. Enjoy the peaceful surroundings and nearby hiking trails. Perfect for families or small groups.",
+    "accommodation": {
+      "bedrooms": 2,
+      "beds": 2,
+      "bath": 1,
+      "guests": 4
+    },
+    "amenities": [
+      "Kitchenette",
+      "Private Bathroom",
+      "Hot Shower",
+      "Heating",
+      "Bed Linens",
+      "Towels",
+      "Outdoor Furniture",
+      "Picnic Table",
+      "Wood Stove"
+    ]
+  },
+  {
+    "name": "Retro Airstream by the Beach",
+    "tagline": "Chic Living by the Sea",
+    "price": "$180/night",
+    "category": "Airstream",
+    "country": "USA",
+    "description": "Stay in style in our retro Airstream, just steps from the beach in Malibu. This unique accommodation features a queen bed, a kitchenette, and a cozy seating area. Enjoy ocean views, Wi-Fi, and easy access to local surf spots. Ideal for couples looking for a chic seaside escape.",
+    "accommodation": {
+      "bedrooms": 1,
+      "beds": 1,
+      "bath": 1,
+      "guests": 2
+    },
+    "amenities": [
+      "Kitchenette",
+      "Private Bathroom",
+      "Hot Shower",
+      "Air Conditioning",
+      "Bed Linens",
+      "Towels",
+      "Outdoor Furniture",
+      "Wi-Fi"
+    ]
+  },
+  {
+    "name": "Countryside Airstream Getaway",
+    "tagline": "Vintage Charm in the Countryside",
+    "price": "$150/night",
+    "category": "Airstream",
+    "country": "UK",
+    "description": "Escape to the Cotswolds in our vintage Airstream, surrounded by rolling hills. This cozy space offers a queen bed, a small sofa bed, a kitchenette, and a private outdoor seating area. Perfect for a romantic retreat or a small family adventure in the countryside.",
+    "accommodation": {
+      "bedrooms": 1,
+      "beds": 2,
+      "bath": 1,
+      "guests": 3
+    },
+    "amenities": [
+      "Kitchenette",
+      "Private Bathroom",
+      "Hot Shower",
+      "Heating",
+      "Bed Linens",
+      "Towels",
+      "Outdoor Furniture",
+      "Picnic Table"
+    ]
+  },
+  {
+    "name": "Desert Oasis Airstream",
+    "tagline": "Modern Comfort in the Desert",
+    "price": "$160/night",
+    "category": "Airstream",
+    "country": "USA",
+    "description": "Experience the beauty of Joshua Tree from our modern Airstream. With a queen bed, a twin bed, a full kitchenette, and an outdoor fire pit, this desert retreat offers a unique blend of comfort and adventure. Ideal for a small group or family seeking a peaceful getaway.",
+    "accommodation": {
+      "bedrooms": 2,
+      "beds": 3,
+      "bath": 1,
+      "guests": 4
+    },
+    "amenities": [
+      "Full Kitchenette",
+      "Private Bathroom",
+      "Hot Shower",
+      "Heating",
+      "Bed Linens",
+      "Towels",
+      "Outdoor Furniture",
+      "Fire Pit"
+    ]
+  },
+  {
+    "name": "Lakeside Cabin Retreat",
+    "tagline": "Tranquil Escape by the Lake",
+    "price": "$220/night",
+    "category": "Cabin",
+    "country": "Canada",
+    "description": "Escape to our lakeside cabin in the Canadian Rockies, where nature and comfort meet. This cabin features two bedrooms, a cozy living area with a fireplace, a fully equipped kitchen, and stunning lake views. Perfect for a peaceful family retreat or a small group adventure.",
+    "accommodation": {
+      "bedrooms": 2,
+      "beds": 3,
+      "bath": 1,
+      "guests": 4
+    },
+    "amenities": [
+      "Full Kitchen",
+      "Private Bathroom",
+      "Hot Shower",
+      "Heating",
+      "Bed Linens",
+      "Towels",
+      "Outdoor Furniture",
+      "Fire Pit",
+      "BBQ Grill"
+    ]
+  },
+  {
+    "name": "Cozy Woodland Cabin",
+    "tagline": "Your Bavarian Hideaway",
+    "price": "$140/night",
+    "category": "Cabin",
+    "country": "Germany",
+    "description": "Immerse yourself in the tranquility of Bavaria with a stay in our cozy woodland cabin. This charming retreat offers a queen bed, a small kitchenette, a wood stove, and a private terrace overlooking the forest. Ideal for couples seeking a serene and romantic escape.",
+    "accommodation": {
+      "bedrooms": 1,
+      "beds": 1,
+      "bath": 1,
+      "guests": 2
+    },
+    "amenities": [
+      "Kitchenette",
+      "Private Bathroom",
+      "Hot Shower",
+      "Heating",
+      "Bed Linens",
+      "Towels",
+      "Outdoor Furniture",
+      "Picnic Table",
+      "Wood Stove"
+    ]
+  },
+  {
+    "name": "Secluded Mountain Cabin",
+    "tagline": "A Retreat in the Pyrenees",
+    "price": "$200/night",
+    "category": "Cabin",
+    "country": "Spain",
+    "description": "Experience the beauty of the Pyrenees from our secluded mountain cabin. With three bedrooms, a fully equipped kitchen, a spacious living area with a fireplace, and breathtaking mountain views, this cabin is perfect for families or groups looking for a peaceful retreat in nature.",
+    "accommodation": {
+      "bedrooms": 3,
+      "beds": 5,
+      "bath": 2,
+      "guests": 6
+    },
+    "amenities": [
+      "Full Kitchen",
+      "Private Bathroom",
+      "Hot Shower",
+      "Heating",
+      "Bed Linens",
+      "Towels",
+      "Outdoor Furniture",
+      "Fire Pit",
+      "BBQ Grill"
+    ]
+  },
+  {
+    "name": "Urban Loft Warehouse",
+    "tagline": "Live the Industrial Dream",
+    "price": "$300/night",
+    "category": "Warehouse",
+    "country": "USA",
+    "description": "Stay in a stylish urban loft warehouse in the heart of Brooklyn. This spacious industrial-chic space features two bedrooms, a fully equipped kitchen, exposed brick walls, and modern amenities. Perfect for friends or families wanting to experience the vibrant city life.",
+    "accommodation": {
+      "bedrooms": 2,
+      "beds": 3,
+      "bath": 1,
+      "guests": 6
+    },
+    "amenities": [
+      "Full Kitchen",
+      "Private Bathroom",
+      "Hot Shower",
+      "Heating",
+      "Bed Linens",
+      "Towels",
+      "Outdoor Furniture",
+      "Picnic Table"
+    ]
+  },
+  {
+    "name": "Converted Warehouse Loft",
+    "tagline": "Artistic Living in Melbourne",
+    "price": "$220/night",
+    "category": "Warehouse",
+    "country": "Australia",
+    "description": "Enjoy the creative atmosphere of Melbourne in our converted warehouse loft. This unique space offers two bedrooms, a large open-plan living area, a full kitchen, and a private rooftop terrace. Ideal for a group of friends or a small family exploring the city’s artsy neighborhoods.",
+    "accommodation": {
+      "bedrooms": 2,
+      "beds": 3,
+      "bath": 1,
+      "guests": 5
+    },
+    "amenities": [
+      "Full Kitchen",
+      "Private Bathroom",
+      "Hot Shower",
+      "Heating",
+      "Bed Linens",
+      "Towels",
+      "Outdoor Furniture",
+      "Picnic Table",
+      "Rooftop Terrace"
+    ]
+  },
+  {
+    "name": "Rustic Warehouse Retreat",
+    "tagline": "Rustic Charm Meets Modern Comfort",
+    "price": "$180/night",
+    "category": "Warehouse",
+    "country": "Portugal",
+    "description": "Experience the blend of rustic charm and modern living in our warehouse retreat in Lisbon. This spacious loft features two bedrooms, an open living area with high ceilings, a fully equipped kitchen, and a balcony with city views. Perfect for a relaxing city getaway.",
+    "accommodation": {
+      "bedrooms": 2,
+      "beds": 3,
+      "bath": 1,
+      "guests": 4
+    },
+    "amenities": [
+      "Full Kitchen",
+      "Private Bathroom",
+      "Hot Shower",
+      "Heating",
+      "Bed Linens",
+      "Towels",
+      "Outdoor Furniture",
+      "Balcony"
+    ]
+  },
+  {
+    "name": "Seaside Cottage",
+    "tagline": "A Coastal Haven",
+    "price": "$160/night",
+    "category": "Cottage",
+    "country": "UK",
+    "description": "Escape to the Cornish coast in our charming seaside cottage. With two cozy bedrooms, a fully equipped kitchen, and a private garden with ocean views, this cottage is perfect for a peaceful family holiday or a romantic retreat by the sea.",
+    "accommodation": {
+      "bedrooms": 2,
+      "beds": 3,
+      "bath": 1,
+      "guests": 4
+    },
+    "amenities": [
+      "Full Kitchen",
+      "Private Bathroom",
+      "Hot Shower",
+      "Heating",
+      "Bed Linens",
+      "Towels",
+      "Outdoor Furniture",
+      "Garden"
+    ]
+  },
+  {
+    "name": "Vineyard Cottage",
+    "tagline": "Your Tuscan Escape",
+    "price": "$140/night",
+    "category": "Cottage",
+    "country": "Italy",
+    "description": "Stay in a picturesque vineyard cottage in the heart of Tuscany. This romantic retreat offers a queen bed, a small kitchenette, and a private terrace overlooking the vineyards. Perfect for couples looking to enjoy the beauty and wine of the Tuscan countryside.",
+    "accommodation": {
+      "bedrooms": 1,
+      "beds": 1,
+      "bath": 1,
+      "guests": 2
+    },
+    "amenities": [
+      "Kitchenette",
+      "Private Bathroom",
+      "Hot Shower",
+      "Heating",
+      "Bed Linens",
+      "Towels",
+      "Outdoor Furniture",
+      "Terrace"
+    ]
+  },
+  {
+    "name": "Lakeside Cottage",
+    "tagline": "Tranquility by the Lake",
+    "price": "$180/night",
+    "category": "Cottage",
+    "country": "UK",
+    "description": "Enjoy the tranquility of the Lake District in our charming lakeside cottage. This cozy home features two bedrooms, a full kitchen, a living area with a fireplace, and direct access to the lake. Ideal for families or small groups looking for a peaceful escape.",
+    "accommodation": {
+      "bedrooms": 2,
+      "beds": 3,
+      "bath": 1,
+      "guests": 4
+    },
+    "amenities": [
+      "Full Kitchen",
+      "Private Bathroom",
+      "Hot Shower",
+      "Heating",
+      "Bed Linens",
+      "Towels",
+      "Outdoor Furniture",
+      "Fireplace",
+      "Lake Access"
+    ]
+  },
+  {
+    "name": "Enchanted Forest Dome",
+    "tagline": "A Fairytale Retreat",
+    "price": "$150/night",
+    "category": "Magic",
+    "country": "Germany",
+    "description": "Step into a fairytale with our enchanted forest dome in the Black Forest. This magical retreat offers a queen bed, a small kitchenette, and a private deck surrounded by ancient trees. Perfect for couples seeking a unique and romantic escape in nature.",
+    "accommodation": {
+      "bedrooms": 1,
+      "beds": 1,
+      "bath": 1,
+      "guests": 2
+    },
+    "amenities": [
+      "Kitchenette",
+      "Private Bathroom",
+      "Hot Shower",
+      "Heating",
+      "Bed Linens",
+      "Towels",
+      "Outdoor Furniture",
+      "Deck"
+    ]
+  },
+  {
+    "name": "Hobbit House",
+    "tagline": "Live Like a Hobbit",
+    "price": "$130/night",
+    "category": "Magic",
+    "country": "New Zealand",
+    "description": "Live like a hobbit in our charming underground home in Matamata. With a cozy bedroom, a small living area, and a kitchenette, this whimsical retreat is perfect for fans of fantasy and nature lovers alike. Ideal for a small family or a couple.",
+    "accommodation": {
+      "bedrooms": 1,
+      "beds": 2,
+      "bath": 1,
+      "guests": 3
+    },
+    "amenities": [
+      "Kitchenette",
+      "Private Bathroom",
+      "Hot Shower",
+      "Heating",
+      "Bed Linens",
+      "Towels"
+    ]
+  },
+  {
+    "name": "Floating Treehouse",
+    "tagline": "An Adventure in the Treetops",
+    "price": "$180/night",
+    "category": "Magic",
+    "country": "Brazil",
+    "description": "Experience the magic of the Amazon in our floating treehouse. Suspended above the forest floor, this unique retreat offers a queen bed, a small seating area, and a private balcony with panoramic jungle views. Perfect for adventurous couples seeking a one-of-a-kind experience.",
+    "accommodation": {
+      "bedrooms": 1,
+      "beds": 1,
+      "bath": 1,
+      "guests": 2
+    },
+    "amenities": [
+      "Private Bathroom",
+      "Hot Shower",
+      "Bed Linens",
+      "Towels",
+      "Outdoor Furniture",
+      "Balcony"
+    ]
+  },
+  {
+    "name": "Modern Container Home",
+    "tagline": "Innovative Living in Austin",
+    "price": "$140/night",
+    "category": "Container",
+    "country": "USA",
+    "description": "Stay in style in our modern container home located in vibrant Austin. This innovative space features two bedrooms, a full kitchen, a living area with a sofa bed, and a private patio. Ideal for friends or a small family wanting to explore the city's music and food scene.",
+    "accommodation": {
+      "bedrooms": 2,
+      "beds": 3,
+      "bath": 1,
+      "guests": 4
+    },
+    "amenities": [
+      "Full Kitchen",
+      "Private Bathroom",
+      "Hot Shower",
+      "Heating",
+      "Bed Linens",
+      "Towels",
+      "Outdoor Furniture",
+      "Patio"
+    ]
+  },
+  {
+    "name": "Eco-Friendly Container Cabin",
+    "tagline": "Sustainable Living with a View",
+    "price": "$120/night",
+    "category": "Container",
+    "country": "New Zealand",
+    "description": "Experience sustainable living in our eco-friendly container cabin in the New Zealand countryside. This cozy retreat offers a queen bed, a kitchenette, and a private deck with stunning views of the rolling hills. Perfect for couples seeking a green getaway.",
+    "accommodation": {
+      "bedrooms": 1,
+      "beds": 1,
+      "bath": 1,
+      "guests": 2
+    },
+    "amenities": [
+      "Kitchenette",
+      "Private Bathroom",
+      "Hot Shower",
+      "Heating",
+      "Bed Linens",
+      "Towels",
+      "Outdoor Furniture",
+      "Deck"
+    ]
+  },
+  {
+    "name": "Industrial Chic Container Loft",
+    "tagline": "Urban Cool in Berlin",
+    "price": "$160/night",
+    "category": "Container",
+    "country": "Germany",
+    "description": "Stay in our industrial-chic container loft in the heart of Berlin. This trendy space features two bedrooms, a full kitchen, an open-plan living area, and a private rooftop terrace. Perfect for friends or a small family exploring the city's vibrant culture.",
+    "accommodation": {
+      "bedrooms": 2,
+      "beds": 3,
+      "bath": 1,
+      "guests": 4
+    },
+    "amenities": [
+      "Full Kitchen",
+      "Private Bathroom",
+      "Hot Shower",
+      "Heating",
+      "Bed Linens",
+      "Towels",
+      "Outdoor Furniture",
+      "Rooftop Terrace"
+    ]
+  },
+  {
+    "name": "Vintage Caravan by the Sea",
+    "tagline": "Retro Charm on the Coast",
+    "price": "$100/night",
+    "category": "Caravan",
+    "country": "Spain",
+    "description": "Enjoy the retro charm of our vintage caravan parked by the beautiful Spanish coastline. With a cozy double bed, a small kitchenette, and a private outdoor seating area, this unique accommodation is perfect for couples or small families looking for a coastal retreat.",
+    "accommodation": {
+      "bedrooms": 1,
+      "beds": 1,
+      "bath": 1,
+      "guests": 2
+    },
+    "amenities": [
+      "Kitchenette",
+      "Private Bathroom",
+      "Hot Shower",
+      "Bed Linens",
+      "Towels",
+      "Outdoor Furniture",
+      "Picnic Table"
+    ]
+  },
+  {
+    "name": "Country Caravan Escape",
+    "tagline": "Rustic Living in the Countryside",
+    "price": "$110/night",
+    "category": "Caravan",
+    "country": "France",
+    "description": "Experience rustic living in our charming country caravan located in the French countryside. Featuring a double bed, a small kitchenette, and a private outdoor seating area, this cozy retreat is perfect for couples seeking a quiet getaway.",
+    "accommodation": {
+      "bedrooms": 1,
+      "beds": 1,
+      "bath": 1,
+      "guests": 2
+    },
+    "amenities": [
+      "Kitchenette",
+      "Private Bathroom",
+      "Hot Shower",
+      "Bed Linens",
+      "Towels",
+      "Outdoor Furniture"
+    ]
+  },
+  {
+    "name": "Lakeside Caravan Retreat",
+    "tagline": "Relax by the Water",
+    "price": "$130/night",
+    "category": "Caravan",
+    "country": "Canada",
+    "description": "Unwind in our lakeside caravan with stunning views of the Canadian wilderness. This cozy caravan features a double bed, a small kitchenette, and a private deck overlooking the lake. Perfect for couples or small families seeking a peaceful retreat.",
+    "accommodation": {
+      "bedrooms": 1,
+      "beds": 1,
+      "bath": 1,
+      "guests": 2
+    },
+    "amenities": [
+      "Kitchenette",
+      "Private Bathroom",
+      "Hot Shower",
+      "Bed Linens",
+      "Towels",
+      "Outdoor Furniture",
+      "Deck"
+    ]
+  },
+  {
+    "name": "Tiny House in the Redwood Forest",
+    "tagline": "Live Big in a Tiny House",
+    "price": "$120/night",
+    "category": "Tiny",
+    "country": "USA",
+    "description": "Experience the magic of tiny living in our cozy tiny house, nestled in the heart of the Redwood Forest. This compact space offers a loft bed, a small kitchenette, and a private deck surrounded by towering trees. Perfect for a solo traveler or couple seeking tranquility.",
+    "accommodation": {
+      "bedrooms": 1,
+      "beds": 1,
+      "bath": 1,
+      "guests": 2
+    },
+    "amenities": [
+      "Kitchenette",
+      "Private Bathroom",
+      "Hot Shower",
+      "Heating",
+      "Bed Linens",
+      "Towels",
+      "Outdoor Furniture",
+      "Hammock"
+    ]
+  },
+  {
+    "name": "Urban Tiny Home in Tokyo",
+    "tagline": "Compact Living in Tokyo",
+    "price": "$140/night",
+    "category": "Tiny",
+    "country": "Japan",
+    "description": "Stay in our stylish tiny home in the heart of Tokyo. This compact yet comfortable space features a loft bed, a kitchenette, and a small living area. Ideal for solo travelers or couples wanting to explore the bustling city while enjoying a cozy retreat.",
+    "accommodation": {
+      "bedrooms": 1,
+      "beds": 1,
+      "bath": 1,
+      "guests": 2
+    },
+    "amenities": [
+      "Kitchenette",
+      "Private Bathroom",
+      "Hot Shower",
+      "Air Conditioning",
+      "Bed Linens",
+      "Towels",
+      "Outdoor Furniture"
+    ]
+  },
+  {
+    "name": "Countryside Tiny Cabin in Vermont",
+    "tagline": "A Tiny Escape to the Countryside",
+    "price": "$110/night",
+    "category": "Tiny",
+    "country": "USA",
+    "description": "Enjoy a quaint escape in our tiny cabin nestled in the Vermont countryside. This charming space offers a loft bed, a small kitchenette, and an outdoor fire pit. Perfect for a peaceful getaway or a romantic retreat in nature.",
+    "accommodation": {
+      "bedrooms": 1,
+      "beds": 1,
+      "bath": 1,
+      "guests": 2
+    },
+    "amenities": [
+      "Kitchenette",
+      "Private Bathroom",
+      "Hot Shower",
+      "Heating",
+      "Bed Linens",
+      "Towels",
+      "Outdoor Furniture",
+      "Fire Pit"
+    ]
+  },
+  {
+    "name": "Alpine Lodge in the Swiss Alps",
+    "tagline": "Luxury in the Heart of the Alps",
+    "price": "$250/night",
+    "category": "Lodge",
+    "country": "Switzerland",
+    "description": "Stay in our luxurious alpine lodge in the heart of the Swiss Alps. This spacious retreat offers three bedrooms, a fully equipped kitchen, a large living area with a fireplace, and a private balcony with breathtaking mountain views. Perfect for families or groups seeking a winter getaway.",
+    "accommodation": {
+      "bedrooms": 3,
+      "beds": 6,
+      "bath": 2,
+      "guests": 6
+    },
+    "amenities": [
+      "Full Kitchen",
+      "Private Bathroom",
+      "Hot Shower",
+      "Heating",
+      "Bed Linens",
+      "Towels",
+      "Outdoor Furniture",
+      "Fire Pit",
+      "BBQ Grill",
+      "Picnic Table"
+    ]
+  },
+  {
+    "name": "Safari Lodge in Kruger National Park",
+    "tagline": "Adventure Awaits in the Wild",
+    "price": "$280/night",
+    "category": "Lodge",
+    "country": "South Africa",
+    "description": "Experience the thrill of the wild in our safari lodge located in Kruger National Park. This comfortable lodge features two bedrooms, a full kitchen, a private deck with views of the savannah, and guided safari tours. Ideal for families or small groups looking for an unforgettable adventure.",
+    "accommodation": {
+      "bedrooms": 2,
+      "beds": 4,
+      "bath": 1,
+      "guests": 4
+    },
+    "amenities": [
+      "Full Kitchen",
+      "Private Bathroom",
+      "Hot Shower",
+      "Heating",
+      "Bed Linens",
+      "Towels",
+      "Outdoor Furniture",
+      "Picnic Table"
+    ]
+  },
+  {
+    "name": "Lakeside Lodge in the Canadian Wilderness",
+    "tagline": "A Secluded Haven by the Lake",
+    "price": "$240/night",
+    "category": "Lodge",
+    "country": "Canada",
+    "description": "Escape to our secluded lakeside lodge in the Canadian wilderness. This spacious lodge offers four bedrooms, a fully equipped kitchen, a large living area with a fireplace, and a private dock. Perfect for large families or groups looking for a peaceful retreat in nature.",
+    "accommodation": {
+      "bedrooms": 4,
+      "beds": 8,
+      "bath": 2,
+      "guests": 8
+    },
+    "amenities": [
+      "Full Kitchen",
+      "Private Bathroom",
+      "Hot Shower",
+      "Heating",
+      "Bed Linens",
+      "Towels",
+      "Outdoor Furniture",
+      "Fire Pit",
+      "BBQ Grill",
+      "Picnic Table",
+      "Dock"
+    ]
+  }
+]
