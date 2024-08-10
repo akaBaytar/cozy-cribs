@@ -1,7 +1,15 @@
-const PropertiesList = () => {
-  return (
-    <div>PropertiesList</div>
-  )
-}
+import Card from '../card/PropertyCard';
 
-export default PropertiesList
+import type { PropertyCard } from '@/utils/types';
+
+const PropertiesList = ({ properties }: { properties: PropertyCard[] }) => {
+  return (
+    <section>
+      {properties.map((property) => (
+        <Card key={property.id} property={property} />
+      ))}
+    </section>
+  );
+};
+
+export default PropertiesList;
