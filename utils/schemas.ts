@@ -35,12 +35,12 @@ export const imageSchema = z.object({
 export const propertySchema = z.object({
   name: z
     .string()
-    .min(3, { message: 'Property name must be at least 3 characters.' })
-    .max(40, { message: 'Property name can be a maximum of 40 characters.' }),
+    .min(3, { message: 'Name must be at least 3 characters.' })
+    .max(40, { message: 'Name can be a maximum of 40 characters.' }),
   tagline: z
     .string()
-    .min(3, { message: 'Property name must be at least 3 characters.' })
-    .max(40, { message: 'Property name can be a maximum of 40 characters.' }),
+    .min(3, { message: 'Tagline must be at least 3 characters.' })
+    .max(60, { message: 'Tagline can be a maximum of 60 characters.' }),
   price: z.coerce
     .number()
     .int()
@@ -51,7 +51,7 @@ export const propertySchema = z.object({
       const count = desc.split(' ').length;
       return count >= 10 && count <= 500;
     },
-    { message: 'Property description must be between 10 and 500 words.' }
+    { message: 'Description must be between 10 and 500 words.' }
   ),
   country: z.string(),
   guests: z.coerce
