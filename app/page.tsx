@@ -1,3 +1,6 @@
+import { Suspense } from 'react';
+
+import Loading from '@/components/card/Loading';
 import CategoriesList from '@/components/home/CategoriesList';
 import PropertiesContainer from '@/components/home/PropertiesContainer';
 
@@ -13,10 +16,12 @@ const Home = ({ searchParams }: { searchParams: SearchParams }) => {
         category={searchParams.category}
         search={searchParams.search}
       />
-      <PropertiesContainer
-        category={searchParams.category}
-        search={searchParams.search}
-      />
+      <Suspense fallback={<Loading />}>
+        <PropertiesContainer
+          category={searchParams.category}
+          search={searchParams.search}
+        />
+      </Suspense>
     </section>
   );
 };
