@@ -29,9 +29,9 @@ export const createRental = async (_: any, formData: FormData) => {
         profileId: user.id,
       },
     });
-
-    redirect('/');
   } catch (error) {
     return renderError(error);
   }
+
+  redirect('/');
 };
