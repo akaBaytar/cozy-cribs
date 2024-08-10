@@ -10,7 +10,7 @@ type PropTypes = {
 
 const EmptyList = ({ heading, message, buttonText }: PropTypes) => {
   return (
-    <div className='mt-4'>
+    <div className='mt-8'>
       <h2 className='text-xl font-bold'>{heading}</h2>
       <p className='text-lg mt-4'>{message}</p>
       <Button asChild className='mt-4' size='lg'>
