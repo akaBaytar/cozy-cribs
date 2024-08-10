@@ -35,11 +35,11 @@ const PropertyCard = ({ property }: { property: PropTypes }) => {
             <span className='font-semibold'>{formatCurrency(price)}</span>
             <span> / night</span>
           </p>
-          {/* TODO ====> FLAG AND NAME COMPONENT HERE */}
+          <FlagAndName code={country} />
         </div>
       </Link>
       <div className='absolute top-5 right-5 z-5'>
-        {/* TODO =====> FAVORITE BUTTON COMPONENT HERE */}
+        <FavoriteButton id={id} />
       </div>
     </article>
   );
