@@ -15,9 +15,9 @@ export const CardSkeleton = () => {
   return (
     <div>
       <Skeleton className='h-72 rounded-md bg-muted' />
-      <Skeleton className='h-3 mt-1 w-3/4 bg-muted' />
-      <Skeleton className='h-2 mt-1 w-3/4 bg-muted' />
-      <Skeleton className='h-3 mt-1 w-1/2 bg-muted' />
+      <Skeleton className='h-3 mt-2 w-3/4 bg-muted' />
+      <Skeleton className='h-3 mt-2 w-3/4 bg-muted' />
+      <Skeleton className='h-3 mt-2 w-1/2 bg-muted' />
     </div>
   );
 };

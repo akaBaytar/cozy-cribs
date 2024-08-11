@@ -1,19 +1,17 @@
 import { auth } from '@clerk/nextjs/server';
 
-import { FaHeart } from 'react-icons/fa';
-import { Button } from '../ui/button';
 import { CardButton } from '../form/Buttons';
+import { fetchFavoriteId } from '@/actions/fetchFavoriteId';
+import FavoriteForm from './FavoriteForm';
 
-const FavoriteButton = ({ id }: { id: string }) => {
+const FavoriteButton = async ({ propertyId }: { propertyId: string }) => {
   const { userId } = auth();
 
   if (!userId) return <CardButton />;
 
-  return (
-    <Button size='icon' variant='outline' className='cursor-pointer'>
-      <FaHeart className='text-lg ' />
-    </Button>
-  );
+  const favoriteId = await fetchFavoriteId({ propertyId });
+
+  return <FavoriteForm favoriteId={favoriteId} propertyId={propertyId} />;
 };
 
 export default FavoriteButton;

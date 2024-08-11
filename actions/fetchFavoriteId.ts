@@ -3,13 +3,22 @@
 import prisma from '@/utils/database';
 import { getAuthUser } from '@/helpers/getAuthUser';
 
-export const fetchFavoriteId = async ({ id }: { id: string }) => {
+type PropType = {
+  propertyId: string;
+};
+
+export const fetchFavoriteId = async ({ propertyId }: PropType) => {
   const user = await getAuthUser();
 
   const favorite = await prisma.favorite.findFirst({
     where: {
-      propertyId: id,
+      propertyId,
       profileId: user?.id,
     },
+    select: {
+      id: true,
+    },
   });
+
+  return favorite?.id || null;
 };

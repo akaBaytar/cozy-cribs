@@ -41,7 +41,7 @@ const PropertyCard = ({ property }: { property: PropTypes }) => {
         </div>
       </Link>
       <div className='absolute top-5 right-5 z-5'>
-        <FavoriteButton id={id} />
+        <FavoriteButton propertyId={id} />
       </div>
     </article>
   );
