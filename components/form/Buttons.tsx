@@ -4,6 +4,9 @@ import { Fragment } from 'react';
 import { useFormStatus } from 'react-dom';
 
 import { ReloadIcon } from '@radix-ui/react-icons';
+import { FaRegHeart } from 'react-icons/fa';
+import { SignInButton } from '@clerk/nextjs';
+
 import { Button } from '../ui/button';
 
 type ButtonProps = {
@@ -30,5 +33,20 @@ export const SubmitButton = (props: ButtonProps) => {
         text
       )}
     </Button>
+  );
+};
+
+export const CardButton = () => {
+  return (
+    <SignInButton mode='modal'>
+      <Button
+        type='button'
+        size='icon'
+        variant='outline'
+        className='p-2 cursor-pointer'
+        asChild>
+        <FaRegHeart />
+      </Button>
+    </SignInButton>
   );
 };
