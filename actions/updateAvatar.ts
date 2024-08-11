@@ -12,6 +12,8 @@ import { renderError } from '@/helpers/renderError';
 export const updateAvatar = async (_: any, formData: FormData) => {
   const user = await getAuthUser();
 
+  if (!user) throw new Error('You must log in first to update your avatar.');
+
   try {
     const image = formData.get('image') as File;
     const validatedFields = validateFields(imageSchema, { image });

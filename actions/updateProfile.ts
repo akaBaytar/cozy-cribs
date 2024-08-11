@@ -11,6 +11,8 @@ import { validateFields } from '@/helpers/validateFields';
 export const updateProfile = async (_: any, formData: FormData) => {
   const user = await getAuthUser();
 
+  if (!user) throw new Error('You must log in first to update your profile.');
+
   try {
     const rawData = Object.fromEntries(formData);
     const validatedFields = validateFields(profileSchema, rawData);

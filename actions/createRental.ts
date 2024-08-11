@@ -13,6 +13,8 @@ import { renderError } from '@/helpers/renderError';
 export const createRental = async (_: any, formData: FormData) => {
   const user = await getAuthUser();
 
+  if (!user) throw new Error('You must log in first to create a rental.');
+
   try {
     const rawData = Object.fromEntries(formData);
     const file = formData.get('image') as File;
