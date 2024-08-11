@@ -4,7 +4,7 @@ import { LuBath, LuParkingCircle } from 'react-icons/lu';
 import { FaShower } from 'react-icons/fa';
 import { GiHeatHaze } from 'react-icons/gi';
 import { IoBedOutline } from 'react-icons/io5';
-import { FaKitchenSet, FaCloud } from 'react-icons/fa6';
+import { FaKitchenSet, FaWifi } from 'react-icons/fa6';
 import { TbAirConditioning } from 'react-icons/tb';
 import { IoIosBonfire, IoMdSunny } from 'react-icons/io';
 import { GiCooler, GiLanternFlame, GiFirstAidKit } from 'react-icons/gi';
@@ -29,7 +29,7 @@ export type Amenity = {
 };
 
 export const amenities: Amenity[] = [
-  { name: 'cloud storage', icon: FaCloud, selected: false },
+  { name: 'wi-fi', icon: FaWifi, selected: false },
   { name: 'parking', icon: LuParkingCircle, selected: false },
   { name: 'fire pit', icon: IoIosBonfire, selected: false },
   { name: 'bbq grill', icon: MdOutlineOutdoorGrill, selected: false },

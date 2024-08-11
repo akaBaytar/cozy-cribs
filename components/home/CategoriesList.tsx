@@ -24,7 +24,7 @@ const CategoriesList = ({ category, search }: ListProps) => {
                   each.label === category ? 'text-primary' : ''
                 }`}>
                 <each.icon className='w-8 h-8' />
-                <p className='text-sm mt-1'>{each.label}</p>
+                <p className='text-sm mt-1 capitalize'>{each.label}</p>
               </article>
             </Link>
           ))}

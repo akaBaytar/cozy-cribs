@@ -7,16 +7,16 @@ import { PiWarehouse, PiLighthouse, PiVan } from 'react-icons/pi';
 import { TbCaravan, TbTent, TbBuildingCottage } from 'react-icons/tb';
 
 export type CategoryLabel =
-  | 'Cabin'
-  | 'Tent'
-  | 'Airstream'
-  | 'Cottage'
-  | 'Container'
-  | 'Caravan'
-  | 'Tiny'
-  | 'Magic'
-  | 'Warehouse'
-  | 'Lodge';
+  | 'cabin'
+  | 'tent'
+  | 'airstream'
+  | 'cottage'
+  | 'container'
+  | 'caravan'
+  | 'tiny'
+  | 'magic'
+  | 'warehouse'
+  | 'lodge';
 
 type Category = {
   label: CategoryLabel;
@@ -24,14 +24,14 @@ type Category = {
 };
 
 export const categories: Category[] = [
-  { label: 'Cabin', icon: MdCabin },
-  { label: 'Airstream', icon: PiVan },
-  { label: 'Tent', icon: TbTent },
-  { label: 'Warehouse', icon: PiWarehouse },
-  { label: 'Cottage', icon: TbBuildingCottage },
-  { label: 'Magic', icon: GiMushroomHouse },
-  { label: 'Container', icon: GoContainer },
-  { label: 'Caravan', icon: TbCaravan },
-  { label: 'Tiny', icon: PiLighthouse },
-  { label: 'Lodge', icon: GiWoodCabin },
+  { label: 'cabin', icon: MdCabin },
+  { label: 'airstream', icon: PiVan },
+  { label: 'tent', icon: TbTent },
+  { label: 'warehouse', icon: PiWarehouse },
+  { label: 'cottage', icon: TbBuildingCottage },
+  { label: 'magic', icon: GiMushroomHouse },
+  { label: 'container', icon: GoContainer },
+  { label: 'caravan', icon: TbCaravan },
+  { label: 'tiny', icon: PiLighthouse },
+  { label: 'lodge', icon: GiWoodCabin },
 ];
