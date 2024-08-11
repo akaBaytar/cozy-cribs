@@ -11,9 +11,9 @@ import { validateFields } from '@/helpers/validateFields';
 import { renderError } from '@/helpers/renderError';
 
 export const createRental = async (_: any, formData: FormData) => {
-  try {
-    const user = await getAuthUser();
+  const user = await getAuthUser();
 
+  try {
     const rawData = Object.fromEntries(formData);
     const file = formData.get('image') as File;
 
