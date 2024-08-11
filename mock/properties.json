@@ -598,7 +598,7 @@
     ]
   },
   {
-    "name": "Urban Tiny Home in Tokyo",
+    "name": "Urban Tiny Home",
     "tagline": "Compact Living in Tokyo",
     "price": "$140/night",
     "category": "Tiny",
@@ -621,7 +621,7 @@
     ]
   },
   {
-    "name": "Countryside Tiny Cabin in Vermont",
+    "name": "Countryside Tiny Cabin",
     "tagline": "A Tiny Escape to the Countryside",
     "price": "$110/night",
     "category": "Tiny",
@@ -645,7 +645,7 @@
     ]
   },
   {
-    "name": "Alpine Lodge in the Swiss Alps",
+    "name": "Alpine Lodge",
     "tagline": "Luxury in the Heart of the Alps",
     "price": "$250/night",
     "category": "Lodge",
@@ -671,7 +671,7 @@
     ]
   },
   {
-    "name": "Safari Lodge in Kruger National Park",
+    "name": "Safari Lodge",
     "tagline": "Adventure Awaits in the Wild",
     "price": "$280/night",
     "category": "Lodge",
@@ -695,7 +695,7 @@
     ]
   },
   {
-    "name": "Lakeside Lodge in the Canadian Wilderness",
+    "name": "Lakeside Lodge",
     "tagline": "A Secluded Haven by the Lake",
     "price": "$240/night",
     "category": "Lodge",
