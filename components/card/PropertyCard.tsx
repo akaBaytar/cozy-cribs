@@ -24,7 +24,9 @@ const PropertyCard = ({ property }: { property: PropTypes }) => {
           />
         </div>
         <div className='flex justify-between items-center'>
-          <h3 className='text-sm font-semibold mt-1'>{name}</h3>
+          <h3 className='text-sm font-semibold mt-1'>
+            {name.length > 22 ? `${name.substring(0, 19)}...` : name}
+          </h3>
           <PropertyRating id={id} inPage={false} />
         </div>
         <p className='text-xs mt-1 text-muted-foreground'>
