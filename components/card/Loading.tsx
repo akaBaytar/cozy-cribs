@@ -5,6 +5,8 @@ const Loading = () => {
     <div className='mt-8 grid gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
       <CardSkeleton />
       <CardSkeleton />
+      <CardSkeleton />
+      <CardSkeleton />
     </div>
   );
 };
