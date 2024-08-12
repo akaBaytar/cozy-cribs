@@ -1,5 +1,7 @@
+import dynamic from 'next/dynamic';
 import { redirect } from 'next/navigation';
 
+import { Skeleton } from '@/components/ui/skeleton';
 import { Separator } from '@/components/ui/separator';
 import Breadcrumbs from '@/components/properties/Breadcrumbs';
 import NameAndTagline from '@/components/properties/NameAndTagline';
@@ -15,6 +17,20 @@ import Amenities from '@/components/properties/Amenities';
 
 import { fetchPropertyDetails } from '@/actions/fetchPropertyDetails';
 
+const DynamicMap = dynamic(
+  () => import('@/components/properties/PropertyMap'),
+  {
+    ssr: false,
+    loading: () => (
+      <>
+        <Skeleton className='h-[12px] w-full mt-4' />
+        <Skeleton className='h-[12px] w-full mt-4' />
+        <Skeleton className='h-[400px] w-full mt-4' />
+      </>
+    ),
+  }
+);
+
 const PropertyDetailsPage = async ({ params }: { params: { id: string } }) => {
   const property = await fetchPropertyDetails(params.id);
 
@@ -29,6 +45,7 @@ const PropertyDetailsPage = async ({ params }: { params: { id: string } }) => {
     image,
     profile,
     amenities,
+    country,
   } = property;
 
   const { firstName, profileImage } = profile;
@@ -59,6 +76,7 @@ const PropertyDetailsPage = async ({ params }: { params: { id: string } }) => {
           <Separator className='mt-4' />
           <Description description={description} />
           <Amenities amenities={amenities} />
+          <DynamicMap code={country} />
         </div>
         <div className='mt-8 sm:mt-12 lg:mt-0'>
           <BookingCalendar />
