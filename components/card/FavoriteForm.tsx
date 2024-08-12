@@ -14,9 +14,6 @@ type PropTypes = {
 const FavoriteForm = ({ propertyId, favoriteId }: PropTypes) => {
   const pathname = usePathname();
 
-  console.log(propertyId,favoriteId,pathname);
-  
-
   const toggleAction = toggleFavorite.bind(null, {
     propertyId,
     favoriteId,
