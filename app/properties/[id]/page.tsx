@@ -1,5 +1,6 @@
 import { redirect } from 'next/navigation';
 
+import { Separator } from '@/components/ui/separator';
 import Breadcrumbs from '@/components/properties/Breadcrumbs';
 import NameAndTagline from '@/components/properties/NameAndTagline';
 import FavoriteButton from '@/components/card/FavoriteButton';
@@ -9,8 +10,8 @@ import PropertyRating from '@/components/card/PropertyRating';
 import Details from '@/components/properties/PropertyDetails';
 import BookingCalendar from '@/components/properties/BookingCalendar';
 import UserInfo from '@/components/properties/UserInfo';
-import { Separator } from '@/components/ui/separator';
 import Description from '@/components/properties/Description';
+import Amenities from '@/components/properties/Amenities';
 
 import { fetchPropertyDetails } from '@/actions/fetchPropertyDetails';
 
@@ -19,7 +20,16 @@ const PropertyDetailsPage = async ({ params }: { params: { id: string } }) => {
 
   if (!property) redirect('/');
 
-  const { category, name, tagline, id, description, image, profile } = property;
+  const {
+    category,
+    name,
+    tagline,
+    id,
+    description,
+    image,
+    profile,
+    amenities,
+  } = property;
 
   const { firstName, profileImage } = profile;
 
@@ -48,6 +58,7 @@ const PropertyDetailsPage = async ({ params }: { params: { id: string } }) => {
           <UserInfo img={profileImage} name={firstName} />
           <Separator className='mt-4' />
           <Description description={description} />
+          <Amenities amenities={amenities} />
         </div>
         <div className='mt-8 sm:mt-12 lg:mt-0'>
           <BookingCalendar />
