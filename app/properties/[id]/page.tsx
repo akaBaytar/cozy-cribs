@@ -57,7 +57,7 @@ const PropertyDetailsPage = async ({ params }: { params: { id: string } }) => {
   return (
     <section>
       <Breadcrumbs category={category} name={name} />
-      <header className='flex justify-between items-center mt-4'>
+      <header className='flex justify-between items-center mt-4 gap-y-4 flex-wrap'>
         <NameAndTagline name={name} tagline={tagline} />
         <div className='flex items-center gap-2'>
           <ShareButton propertyId={id} name={name} />
@@ -67,9 +67,9 @@ const PropertyDetailsPage = async ({ params }: { params: { id: string } }) => {
       <ImageContainer src={image} alt={name} />
       <section className='lg:flex lg:justify-between gap-x-12 mt-8 sm:mt-12'>
         <div>
-          <div className='flex justify-between gap-4 text-sm sm:text-lg'>
-            <h2 className='font-semibold'>{name}</h2>
-            <PropertyRating inPage={false} id={id} />
+          <div className='flex justify-between gap-x-4 gap-y-2 sm:text-lg flex-wrap'>
+            <h2>{name}</h2>
+            <PropertyRating inPage id={id} />
           </div>
           <Details details={details} />
           <UserInfo img={profileImage} name={firstName} />

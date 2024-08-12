@@ -1,7 +1,8 @@
 'use client';
 
-import { useState } from 'react';
+import { Fragment, useState } from 'react';
 
+import Title from './Title';
 import { DateRange } from 'react-day-picker';
 import { Calendar } from '../ui/calendar';
 
@@ -12,13 +13,16 @@ const BookingCalendar = () => {
   const [range, setRange] = useState<DateRange | undefined>(selectedRange);
 
   return (
-    <Calendar
-      mode='range'
-      defaultMonth={currentDate}
-      selected={range}
-      onSelect={setRange}
-      className='border rounded-md'
-    />
+    <Fragment>
+      <Title text='Make a Reservation' />
+      <Calendar
+        mode='range'
+        defaultMonth={currentDate}
+        selected={range}
+        onSelect={setRange}
+        className='border rounded-md'
+      />
+    </Fragment>
   );
 };
 
