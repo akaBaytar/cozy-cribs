@@ -6,6 +6,7 @@ import FavoriteButton from '@/components/card/FavoriteButton';
 import ShareButton from '@/components/properties/ShareButton';
 import ImageContainer from '@/components/properties/ImageContainer';
 import PropertyRating from '@/components/card/PropertyRating';
+import Details from '@/components/properties/PropertyDetails';
 import BookingCalendar from '@/components/properties/BookingCalendar';
 
 import { fetchPropertyDetails } from '@/actions/fetchPropertyDetails';
@@ -33,10 +34,11 @@ const PropertyDetailsPage = async ({ params }: { params: { id: string } }) => {
       <ImageContainer src={image} alt={name} />
       <section className='lg:flex lg:justify-between gap-x-12 mt-8 sm:mt-12'>
         <div>
-          <div className='flex justify-between gap-8 text-xs sm:text-lg'>
+          <div className='flex justify-between gap-4 text-sm sm:text-lg'>
             <h2 className='font-semibold'>{name}</h2>
-            <PropertyRating inPage id={id} />
+            <PropertyRating inPage={false} id={id} />
           </div>
+          <Details details={details} />
         </div>
         <div className='mt-8 sm:mt-12 lg:mt-0'>
           <BookingCalendar />

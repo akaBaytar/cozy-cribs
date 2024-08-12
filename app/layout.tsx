@@ -9,7 +9,10 @@ import Footer from '@/components/footer/Footer';
 
 import { ClerkProvider } from '@clerk/nextjs';
 
-const poppins = Poppins({ subsets: ['latin'], weight: ['400'] });
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: ['200', '300', '400', '500', '600', '700'],
+});
 
 export const metadata: Metadata = {
   title: 'CozyCribs',
