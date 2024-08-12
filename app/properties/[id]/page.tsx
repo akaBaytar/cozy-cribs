@@ -8,6 +8,7 @@ import ImageContainer from '@/components/properties/ImageContainer';
 import PropertyRating from '@/components/card/PropertyRating';
 import Details from '@/components/properties/PropertyDetails';
 import BookingCalendar from '@/components/properties/BookingCalendar';
+import UserInfo from '@/components/properties/UserInfo';
 
 import { fetchPropertyDetails } from '@/actions/fetchPropertyDetails';
 
@@ -16,9 +17,12 @@ const PropertyDetailsPage = async ({ params }: { params: { id: string } }) => {
 
   if (!property) redirect('/');
 
-  const { category, name, tagline, id, description, image } = property;
+  const { category, name, tagline, id, description, image, profile } = property;
+
+  const { firstName, profileImage } = profile;
 
   const { baths, bedrooms, beds, guests } = property;
+
   const details = { baths, bedrooms, beds, guests };
 
   return (
@@ -39,6 +43,7 @@ const PropertyDetailsPage = async ({ params }: { params: { id: string } }) => {
             <PropertyRating inPage={false} id={id} />
           </div>
           <Details details={details} />
+          <UserInfo img={profileImage} name={firstName} />
         </div>
         <div className='mt-8 sm:mt-12 lg:mt-0'>
           <BookingCalendar />
