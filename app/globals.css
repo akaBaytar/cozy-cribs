@@ -69,7 +69,20 @@
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
+  }
+
+  tr {
+    @apply w-full flex justify-around;
+  }
+
+  td {
+    @apply w-full;
+  }
+
+  th {
+    @apply w-full;
   }
 }

@@ -15,7 +15,7 @@ type PropTypes = {
 const Breadcrumbs = ({ name, category }: PropTypes) => {
   return (
     <Breadcrumb>
-      <BreadcrumbList>
+      <BreadcrumbList className='text-xs'>
         <BreadcrumbItem>
           <BreadcrumbLink href='/'>Home</BreadcrumbLink>
         </BreadcrumbItem>
