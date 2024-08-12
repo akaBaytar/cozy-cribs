@@ -9,6 +9,8 @@ import PropertyRating from '@/components/card/PropertyRating';
 import Details from '@/components/properties/PropertyDetails';
 import BookingCalendar from '@/components/properties/BookingCalendar';
 import UserInfo from '@/components/properties/UserInfo';
+import { Separator } from '@/components/ui/separator';
+import Description from '@/components/properties/Description';
 
 import { fetchPropertyDetails } from '@/actions/fetchPropertyDetails';
 
@@ -44,6 +46,8 @@ const PropertyDetailsPage = async ({ params }: { params: { id: string } }) => {
           </div>
           <Details details={details} />
           <UserInfo img={profileImage} name={firstName} />
+          <Separator className='mt-4' />
+          <Description description={description} />
         </div>
         <div className='mt-8 sm:mt-12 lg:mt-0'>
           <BookingCalendar />
