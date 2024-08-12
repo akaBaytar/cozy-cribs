@@ -4,6 +4,7 @@ import Breadcrumbs from '@/components/properties/Breadcrumbs';
 import NameAndTagline from '@/components/properties/NameAndTagline';
 import FavoriteButton from '@/components/card/FavoriteButton';
 import ShareButton from '@/components/properties/ShareButton';
+import ImageContainer from '@/components/properties/ImageContainer';
 
 import { fetchPropertyDetails } from '@/actions/fetchPropertyDetails';
 
@@ -12,7 +13,7 @@ const PropertyDetailsPage = async ({ params }: { params: { id: string } }) => {
 
   if (!property) redirect('/');
 
-  const { category, name, tagline, id, description } = property;
+  const { category, name, tagline, id, description, image } = property;
 
   const { baths, bedrooms, beds, guests } = property;
   const details = { baths, bedrooms, beds, guests };
@@ -27,6 +28,7 @@ const PropertyDetailsPage = async ({ params }: { params: { id: string } }) => {
           <FavoriteButton propertyId={id} />
         </div>
       </header>
+      <ImageContainer src={image} alt={name} />
     </section>
   );
 };
