@@ -15,6 +15,7 @@ import UserInfo from '@/components/properties/UserInfo';
 import Description from '@/components/properties/Description';
 import Amenities from '@/components/properties/Amenities';
 import SubmitReview from '@/components/reviews/SubmitReview';
+import PropertyReviews from '@/components/reviews/PropertyReviews';
 
 import { fetchPropertyDetails } from '@/actions/fetchPropertyDetails';
 
@@ -78,6 +79,7 @@ const PropertyDetailsPage = async ({ params }: { params: { id: string } }) => {
         </div>
       </section>
       <SubmitReview id={property.id} />
+      <PropertyReviews id={property.id}/>
     </section>
   );
 };
