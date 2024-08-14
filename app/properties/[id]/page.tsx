@@ -21,13 +21,7 @@ const DynamicMap = dynamic(
   () => import('@/components/properties/PropertyMap'),
   {
     ssr: false,
-    loading: () => (
-      <>
-        <Skeleton className='h-[12px] w-full mt-4' />
-        <Skeleton className='h-[12px] w-full mt-4' />
-        <Skeleton className='h-[400px] w-full mt-4' />
-      </>
-    ),
+    loading: () => <Skeleton className='h-[400px] w-full mt-4' />,
   }
 );
 
