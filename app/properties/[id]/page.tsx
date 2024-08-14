@@ -14,6 +14,7 @@ import BookingCalendar from '@/components/properties/BookingCalendar';
 import UserInfo from '@/components/properties/UserInfo';
 import Description from '@/components/properties/Description';
 import Amenities from '@/components/properties/Amenities';
+import SubmitReview from '@/components/reviews/SubmitReview';
 
 import { fetchPropertyDetails } from '@/actions/fetchPropertyDetails';
 
@@ -60,7 +61,7 @@ const PropertyDetailsPage = async ({ params }: { params: { id: string } }) => {
       </header>
       <ImageContainer src={image} alt={name} />
       <section className='lg:flex lg:justify-between gap-x-12 mt-8 sm:mt-12'>
-        <div>
+        <div className='lg:w-8/12'>
           <div className='flex justify-between gap-x-4 gap-y-2 sm:text-lg flex-wrap'>
             <h2>{name}</h2>
             <PropertyRating inPage id={id} />
@@ -76,6 +77,7 @@ const PropertyDetailsPage = async ({ params }: { params: { id: string } }) => {
           <BookingCalendar />
         </div>
       </section>
+      <SubmitReview id={property.id} />
     </section>
   );
 };
