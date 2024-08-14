@@ -4,7 +4,7 @@
 
 ## Live Demo
 
-- You can access the live demo via [Vercel]().
+- You can access the live demo via [Vercel](https://cozycribs-burakbilgili.vercel.app).
 
 ## Screens
 
