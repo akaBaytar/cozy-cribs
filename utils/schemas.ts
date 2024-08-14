@@ -72,3 +72,15 @@ export const propertySchema = z.object({
     .min(0, { message: 'Baths amount must be a positive number.' }),
   amenities: z.string(),
 });
+
+export const reviewSchema = z.object({
+  propertyId: z.string(),
+  rating: z.coerce.number().int().min(1).max(5),
+  comment: z.string().refine(
+    (comment) => {
+      const count = comment.split(' ').length;
+      return count >= 10 && count <= 200;
+    },
+    { message: 'Comment must be between 10 and 200 words.' }
+  ),
+});

@@ -26,7 +26,7 @@ const SubmitReview = ({ id }: { id: string }) => {
         <Card className='p-4 mt-8 lg:w-8/12'>
           <FormContainer action={createReview}>
             <input type='hidden' name='propertyId' value={id} />
-            <RatingInput name='Your Rating' />
+            <RatingInput name='rating' label='Your Rating' />
             <TextAreaInput name='comment' label='Your Comment' />
             <SubmitButton text='Submit' className='mt-4 w-full' />
           </FormContainer>
