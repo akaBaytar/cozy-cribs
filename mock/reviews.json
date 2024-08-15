@@ -1,0 +1,168 @@
+[
+  {
+    "type": "cabin",
+    "reviews": [
+      {
+        "rating": 5,
+        "comment": "Amazing cabin! Perfect blend of comfort and nature."
+      },
+      {
+        "rating": 4,
+        "comment": "Great stay, but the Wi-Fi could be improved."
+      },
+      {
+        "rating": 3,
+        "comment": "Nice cabin, but a bit too remote for my taste."
+      },
+      { "rating": 2, "comment": "Basic cabin with minimal amenities." },
+      { "rating": 1, "comment": "Disappointing experience. Not as described." }
+    ]
+  },
+  {
+    "type": "airstream",
+    "reviews": [
+      {
+        "rating": 5,
+        "comment": "Loved the airstream experience! Very unique and comfortable."
+      },
+      { "rating": 4, "comment": "Quirky and fun stay, but a bit cramped." },
+      {
+        "rating": 3,
+        "comment": "Nice concept, but could use more storage space."
+      },
+      {
+        "rating": 2,
+        "comment": "Not worth the price. Too small for the cost."
+      },
+      { "rating": 1, "comment": "Poor cleanliness and very cramped." }
+    ]
+  },
+  {
+    "type": "tent",
+    "reviews": [
+      {
+        "rating": 5,
+        "comment": "Fantastic glamping experience! Highly recommended."
+      },
+      { "rating": 4, "comment": "Comfortable and cozy, but noisy at night." },
+      {
+        "rating": 3,
+        "comment": "Decent stay, but not as private as I expected."
+      },
+      { "rating": 2, "comment": "Basic tent setup. Could use more amenities." },
+      { "rating": 1, "comment": "Very uncomfortable. Would not stay again." }
+    ]
+  },
+  {
+    "type": "warehouse",
+    "reviews": [
+      { "rating": 5, "comment": "Incredible space! Modern and spacious." },
+      { "rating": 4, "comment": "Great location, but a bit noisy." },
+      { "rating": 3, "comment": "Interesting concept, but not very cozy." },
+      { "rating": 2, "comment": "Too industrial for my liking." },
+      { "rating": 1, "comment": "Uncomfortable and lacking basic amenities." }
+    ]
+  },
+  {
+    "type": "cottage",
+    "reviews": [
+      {
+        "rating": 5,
+        "comment": "Charming and cozy cottage. Perfect for a getaway."
+      },
+      {
+        "rating": 4,
+        "comment": "Lovely stay, but the kitchen could be better equipped."
+      },
+      { "rating": 3, "comment": "Nice, but a bit too small for the price." },
+      { "rating": 2, "comment": "Not very clean. Needs some maintenance." },
+      { "rating": 1, "comment": "Disappointing. Not worth the money." }
+    ]
+  },
+  {
+    "type": "magic",
+    "reviews": [
+      {
+        "rating": 5,
+        "comment": "Absolutely magical experience. Exceeded expectations."
+      },
+      { "rating": 4, "comment": "Enchanting stay, but a bit pricey." },
+      {
+        "rating": 3,
+        "comment": "Interesting concept, but not as magical as I hoped."
+      },
+      { "rating": 2, "comment": "Over hyped and underwhelming." },
+      {
+        "rating": 1,
+        "comment": "Very disappointed. Did not match the description."
+      }
+    ]
+  },
+  {
+    "type": "container",
+    "reviews": [
+      {
+        "rating": 5,
+        "comment": "Unique and stylish. Loved the container house."
+      },
+      { "rating": 4, "comment": "Cool concept, but a bit small." },
+      { "rating": 3, "comment": "Interesting stay, but not very practical." },
+      { "rating": 2, "comment": "Too cramped for comfort." },
+      { "rating": 1, "comment": "Not what I expected. Very uncomfortable." }
+    ]
+  },
+  {
+    "type": "caravan",
+    "reviews": [
+      {
+        "rating": 5,
+        "comment": "Great caravan experience. Very comfortable and well-equipped."
+      },
+      {
+        "rating": 4,
+        "comment": "Enjoyed the stay, but the space was limited."
+      },
+      { "rating": 3, "comment": "Nice, but could use more amenities." },
+      { "rating": 2, "comment": "Basic caravan with minimal comfort." },
+      { "rating": 1, "comment": "Unpleasant stay. Not worth the money." }
+    ]
+  },
+  {
+    "type": "tiny",
+    "reviews": [
+      {
+        "rating": 5,
+        "comment": "Adorable tiny home. Perfect for a short stay."
+      },
+      {
+        "rating": 4,
+        "comment": "Very cute and functional, but a bit cramped."
+      },
+      { "rating": 3, "comment": "Nice idea, but a bit too small for comfort." },
+      { "rating": 2, "comment": "Not comfortable enough for a longer stay." },
+      { "rating": 1, "comment": "Uncomfortable and too tiny for my taste." }
+    ]
+  },
+  {
+    "type": "lodge",
+    "reviews": [
+      {
+        "rating": 5,
+        "comment": "Beautiful lodge. Perfect for a nature retreat."
+      },
+      {
+        "rating": 4,
+        "comment": "Great stay with lovely views, but a bit pricey."
+      },
+      {
+        "rating": 3,
+        "comment": "Nice lodge, but could use better maintenance."
+      },
+      {
+        "rating": 2,
+        "comment": "Not as luxurious as expected. Needs improvement."
+      },
+      { "rating": 1, "comment": "Very disappointed. Not worth the cost." }
+    ]
+  }
+]
