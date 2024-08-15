@@ -3,7 +3,7 @@
 import prisma from '@/utils/database';
 import { getAuthUser } from '@/helpers/getAuthUser';
 
-export const fetchPropertyByUser = async () => {
+export const fetchReviewByUser = async () => {
   const user = await getAuthUser();
 
   if (!user) throw new Error('You must log in first to see a your reviews.');

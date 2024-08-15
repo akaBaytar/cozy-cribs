@@ -23,15 +23,13 @@ const ReviewCard = ({ review, children }: PropTypes) => {
         <div className='flex items-center'>
           <Image
             src={review.image}
-            alt={`${review.name} avatar`}
-            width={48}
-            height={48}
+            alt={review.name}
+            width={240}
+            height={240}
             className='w-12 h-12 rounded-full object-cover'
           />
           <div className='ml-4'>
-            <h3 className='text-sm mb-1 capitalize'>
-              {review.name}
-            </h3>
+            <h3 className='text-sm mb-1 capitalize'>{review.name}</h3>
             <Rating rating={review.rating} />
           </div>
         </div>
