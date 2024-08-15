@@ -1,6 +1,8 @@
 import dynamic from 'next/dynamic';
 import { redirect } from 'next/navigation';
 
+import { auth } from '@clerk/nextjs/server';
+
 import { Skeleton } from '@/components/ui/skeleton';
 import { Separator } from '@/components/ui/separator';
 import Breadcrumbs from '@/components/properties/Breadcrumbs';
@@ -17,6 +19,7 @@ import Amenities from '@/components/properties/Amenities';
 import SubmitReview from '@/components/reviews/SubmitReview';
 import PropertyReviews from '@/components/reviews/PropertyReviews';
 
+import { fetchReview } from '@/actions/fetchReview';
 import { fetchPropertyDetails } from '@/actions/fetchPropertyDetails';
 
 const DynamicMap = dynamic(
@@ -32,23 +35,19 @@ const PropertyDetailsPage = async ({ params }: { params: { id: string } }) => {
 
   if (!property) redirect('/');
 
-  const {
-    category,
-    name,
-    tagline,
-    id,
-    description,
-    image,
-    profile,
-    amenities,
-    country,
-  } = property;
-
+  const { baths, bedrooms, beds, guests } = property;
+  const { image, profile, amenities, country } = property;
+  const { category, name, tagline, id, description } = property;
   const { firstName, profileImage } = profile;
 
-  const { baths, bedrooms, beds, guests } = property;
-
   const details = { baths, bedrooms, beds, guests };
+
+  const { userId } = auth();
+
+  const isNotOwner = property.profile.clerkId !== userId;
+
+  const reviewDoesNotExist =
+    userId && isNotOwner && !(await fetchReview(userId, property.id));
 
   return (
     <section>
@@ -78,8 +77,8 @@ const PropertyDetailsPage = async ({ params }: { params: { id: string } }) => {
           <BookingCalendar />
         </div>
       </section>
-      <SubmitReview id={property.id} />
-      <PropertyReviews id={property.id}/>
+      {reviewDoesNotExist && <SubmitReview id={property.id} />}
+      <PropertyReviews id={property.id} />
     </section>
   );
 };
