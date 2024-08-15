@@ -1,5 +1,6 @@
 'use server';
 
+import { redirect } from 'next/navigation';
 import { revalidatePath } from 'next/cache';
 
 import prisma from '@/database';
@@ -13,6 +14,7 @@ export const createReview = async (_: any, formData: FormData) => {
   const user = await getAuthUser();
 
   if (!user) throw new Error('You must log in first to leave a review.');
+  if (!user.privateMetadata.hasProfile) redirect('/profile/create');
 
   try {
     const rawData = Object.fromEntries(formData);

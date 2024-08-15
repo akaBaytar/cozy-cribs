@@ -14,6 +14,7 @@ export const createRental = async (_: any, formData: FormData) => {
   const user = await getAuthUser();
 
   if (!user) throw new Error('You must log in first to create a rental.');
+  if (!user.privateMetadata.hasProfile) redirect('/profile/create');
 
   try {
     const rawData = Object.fromEntries(formData);

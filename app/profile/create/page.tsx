@@ -14,7 +14,11 @@ const CreateProfile = async () => {
 
   return (
     <section>
-      <h1 className='text-2xl font-semibold mb-8'>New User</h1>
+      <h1 className='text-2xl font-semibold mb-8'>Welcome</h1>
+      <p className='mb-8 bg-muted p-8 border rounded-md leading-loose'>
+        To create a listing, leave a review, make a reservation, or perform
+        other actions, you must first complete your profile.
+      </p>
       <div className='border p-8 rounded-md'>
         <FormContainer action={createProfile}>
           <div className='grid md:grid-cols-2 gap-4 md:gap-x-8 mt-4'>
@@ -37,7 +41,7 @@ const CreateProfile = async () => {
               autoComplete='email'
               defaultValue={user?.emailAddresses[0].emailAddress}
             />
-            <SubmitButton text='Create a Profile' className='mt-6 h-9 w-full' />
+            <SubmitButton text='Complete a Profile' className='mt-7 h-9 w-full' />
           </div>
         </FormContainer>
       </div>

@@ -5,12 +5,7 @@ import SignOut from './SignOut';
 
 import { links } from '@/utils/links';
 
-import {
-  SignedOut,
-  SignedIn,
-  SignInButton,
-  SignUpButton,
-} from '@clerk/nextjs';
+import { SignedOut, SignedIn, SignInButton, SignUpButton } from '@clerk/nextjs';
 import { LuAlignLeft } from 'react-icons/lu';
 import { Button } from '../ui/button';
 import {
@@ -38,7 +33,7 @@ const LinksDropdown = () => {
             </SignInButton>
           </DropdownMenuItem>
           <DropdownMenuItem>
-            <SignUpButton mode='modal'>
+            <SignUpButton mode='modal' forceRedirectUrl='/profile/create'>
               <button className='w-full text-left'>Register</button>
             </SignUpButton>
           </DropdownMenuItem>
@@ -46,7 +41,9 @@ const LinksDropdown = () => {
         <SignedIn>
           {links.map(({ href, label }) => (
             <DropdownMenuItem key={href}>
-              <Link href={href} className='w-full'>{label}</Link>
+              <Link href={href} className='w-full'>
+                {label}
+              </Link>
             </DropdownMenuItem>
           ))}
           <DropdownMenuSeparator />

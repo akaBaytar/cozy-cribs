@@ -14,6 +14,7 @@ export const createBooking = async (prevState: StateProps) => {
   const user = await getAuthUser();
 
   if (!user) throw new Error('You must log in first to make a reservation.');
+  if (!user.privateMetadata.hasProfile) redirect('/profile/create');
 
   const { checkIn, checkOut, propertyId } = prevState;
 
