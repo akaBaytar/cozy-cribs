@@ -22,9 +22,34 @@ const BookingCalendar = () => {
 
   const [range, setRange] = useState<DateRange | undefined>(defaultSelected);
 
+  const bookings = useProperty((state) => state.bookings);
+
+  const { toast } = useToast();
+
+  const blockedPeriods = generateBlockedPeriods({
+    bookings,
+    today: currentDate,
+  });
+
+  const unavailableDates = generateDisabledDates(blockedPeriods);
+
   useEffect(() => {
+    const selectedRange = generateDateRange(range);
+
+    const isDisabledDateIncluded = selectedRange.some((date) => {
+      if (unavailableDates[date]) {
+        setRange(defaultSelected);
+
+        toast({ description: 'Some dates you selected are booked.' });
+
+        return true;
+      }
+
+      return false;
+    });
+
     useProperty.setState({ range });
-  }, [range]);
+  }, [range, toast, unavailableDates]);
 
   return (
     <Fragment>
@@ -35,6 +60,7 @@ const BookingCalendar = () => {
         selected={range}
         onSelect={setRange}
         className='mb-4 border rounded-md'
+        disabled={blockedPeriods}
       />
     </Fragment>
   );
