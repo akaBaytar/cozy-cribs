@@ -8,14 +8,17 @@ import { SignInButton } from '@clerk/nextjs';
 import { Button } from '../ui/button';
 import { ReloadIcon } from '@radix-ui/react-icons';
 import { FaHeart, FaRegHeart } from 'react-icons/fa';
+import { LuTrash2, LuPenSquare } from 'react-icons/lu';
 
 type ButtonProps = {
   className?: string;
   text?: string;
-  size?: buttonSizes;
+  size?: ButtonSizes;
 };
 
-type buttonSizes = 'default' | 'sm' | 'lg' | 'icon';
+type ButtonSizes = 'default' | 'sm' | 'lg' | 'icon';
+
+type ActionType = 'edit' | 'delete';
 
 export const SubmitButton = (props: ButtonProps) => {
   const { className = '', text = 'Submit', size = 'lg' } = props;
@@ -67,6 +70,34 @@ export const FavoriteButton = ({ isFavorite }: { isFavorite: boolean }) => {
       ) : (
         <FaRegHeart />
       )}
+    </Button>
+  );
+};
+
+export const IconButton = ({ action }: { action: ActionType }) => {
+  const { pending } = useFormStatus();
+
+  const renderIcon = () => {
+    switch (action) {
+      case 'edit':
+        return <LuPenSquare />;
+
+      case 'delete':
+        return <LuTrash2 />;
+
+      default:
+        const never: never = action;
+        throw new Error(`Invalid action type: ${never}.`);
+    }
+  };
+
+  return (
+    <Button
+      type='submit'
+      size='icon'
+      variant='link'
+      className='p-2 cursor-pointer'>
+      {pending ? <ReloadIcon className='animate-spin' /> : renderIcon()}
     </Button>
   );
 };
