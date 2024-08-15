@@ -33,7 +33,7 @@ const DynamicBooking = dynamic(
   () => import('@/components/booking/BookingWrapper'),
   {
     ssr: false,
-    loading: () => <Skeleton className='h-[200px] w-full mt-4' />,
+    loading: () => <Skeleton className='h-[300px] w-full mt-4' />,
   }
 );
 
@@ -69,7 +69,7 @@ const PropertyDetailsPage = async ({ params }: { params: { id: string } }) => {
       </header>
       <ImageContainer src={image} alt={name} />
       <section className='lg:flex lg:justify-between gap-x-12 mt-8 sm:mt-12'>
-        <div className='lg:w-8/12'>
+        <div className='lg:w-7/12'>
           <div className='flex justify-between gap-x-4 gap-y-2 sm:text-lg flex-wrap'>
             <h2>{name}</h2>
             <PropertyRating inPage id={id} />
@@ -81,7 +81,7 @@ const PropertyDetailsPage = async ({ params }: { params: { id: string } }) => {
           <Amenities amenities={amenities} />
           <DynamicMap code={country} />
         </div>
-        <div className='mt-8 sm:mt-12 lg:mt-0'>
+        <div className='mt-8 sm:mt-12 lg:mt-0 lg:w-1/3'>
           <DynamicBooking bookings={bookings} price={price} propertyId={id} />
         </div>
       </section>
