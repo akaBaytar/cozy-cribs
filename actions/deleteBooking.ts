@@ -14,7 +14,7 @@ export const deleteBooking = async (prevState: { bookingId: string }) => {
   if (!user) throw new Error('You must log in first to delete a booking.');
 
   try {
-    const result = await prisma.booking.delete({
+    await prisma.booking.delete({
       where: {
         id: bookingId,
         profileId: user.id,
@@ -25,6 +25,6 @@ export const deleteBooking = async (prevState: { bookingId: string }) => {
 
     return { message: 'Booking deleted successfully.' };
   } catch (error) {
-    renderError(error);
+    return renderError(error);
   }
 };
