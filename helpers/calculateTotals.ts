@@ -11,8 +11,8 @@ export const calculateTotals = ({ checkIn, checkOut, price }: PropTypes) => {
 
   const subTotal = totalNights * price;
 
-  const serviceFee = 20;
-  const cleaningFee = 10;
+  const serviceFee = subTotal * 0.05;
+  const cleaningFee = subTotal * 0.02;
   const tax = subTotal * 0.18;
 
   const orderTotal = subTotal + cleaningFee + serviceFee + tax;
