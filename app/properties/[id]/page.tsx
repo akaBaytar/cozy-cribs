@@ -12,7 +12,6 @@ import ShareButton from '@/components/properties/ShareButton';
 import ImageContainer from '@/components/properties/ImageContainer';
 import PropertyRating from '@/components/card/PropertyRating';
 import Details from '@/components/properties/PropertyDetails';
-import BookingCalendar from '@/components/properties/BookingCalendar';
 import UserInfo from '@/components/properties/UserInfo';
 import Description from '@/components/properties/Description';
 import Amenities from '@/components/properties/Amenities';
@@ -74,7 +73,7 @@ const PropertyDetailsPage = async ({ params }: { params: { id: string } }) => {
           <DynamicMap code={country} />
         </div>
         <div className='mt-8 sm:mt-12 lg:mt-0'>
-          <BookingCalendar />
+          
         </div>
       </section>
       {reviewDoesNotExist && <SubmitReview id={property.id} />}
