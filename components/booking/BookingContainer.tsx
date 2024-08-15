@@ -1,7 +1,23 @@
-const BookingContainer = () => {
-  return (
-    <div>BookingContainer</div>
-  )
-}
+'use client';
 
-export default BookingContainer
+import BookingForm from './BookingForm';
+import ConfirmBooking from './ConfirmBooking';
+
+import { useProperty } from '@/store';
+
+const BookingContainer = () => {
+  const { range } = useProperty((state) => state);
+
+  if (!range || !range.from || !range.to) return null;
+
+  if (range.to.getTime() === range.from.getTime()) return null;
+
+  return (
+    <div className='w-full'>
+      <BookingForm />
+      <ConfirmBooking />
+    </div>
+  );
+};
+
+export default BookingContainer;
