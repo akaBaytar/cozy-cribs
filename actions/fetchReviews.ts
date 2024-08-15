@@ -1,6 +1,6 @@
 'use server';
 
-import prisma from '@/utils/database';
+import prisma from '@/database';
 
 export const fetchReviews = async (propertyId: string) => {
   const reviews = await prisma.review.findMany({

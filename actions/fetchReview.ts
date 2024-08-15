@@ -1,6 +1,6 @@
 'use server';
 
-import prisma from '@/utils/database';
+import prisma from '@/database';
 
 export const fetchReview = async (userId: string, propertyId: string) => {
   return prisma.review.findFirst({

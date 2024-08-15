@@ -1,6 +1,6 @@
 import { redirect } from 'next/navigation';
 
-import prisma from '@/utils/database';
+import prisma from '@/database';
 import { getAuthUser } from '@/helpers/getAuthUser';
 
 export const fetchProfile = async () => {

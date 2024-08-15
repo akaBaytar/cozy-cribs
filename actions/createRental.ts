@@ -2,8 +2,8 @@
 
 import { redirect } from 'next/navigation';
 
-import prisma from '@/utils/database';
-import { imageSchema, propertySchema } from '@/utils/schemas';
+import prisma from '@/database';
+import { imageSchema, propertySchema } from '@/schemas';
 import { uploadImage } from '@/utils/supabase';
 
 import { getAuthUser } from '@/helpers/getAuthUser';

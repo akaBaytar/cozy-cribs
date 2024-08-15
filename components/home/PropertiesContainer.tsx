@@ -2,7 +2,7 @@ import PropertiesList from './PropertiesList';
 import EmptyList from './EmptyList';
 
 import { fetchProperties } from '@/actions/fetchProperties';
-import type { PropertyCard } from '@/utils/types';
+import type { PropertyCard } from '@/types';
 
 type ContainerProps = {
   category?: string;

@@ -2,9 +2,9 @@
 
 import { revalidatePath } from 'next/cache';
 
-import prisma from '@/utils/database';
+import prisma from '@/database';
 import { getAuthUser } from '@/helpers/getAuthUser';
-import { profileSchema } from '@/utils/schemas';
+import { profileSchema } from '@/schemas';
 import { renderError } from '@/helpers/renderError';
 import { validateFields } from '@/helpers/validateFields';
 

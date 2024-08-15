@@ -10,7 +10,7 @@ import { SubmitButton } from './Buttons';
 import FormContainer from './FormContainer';
 import ImageInput from './ImageInput';
 
-import { type actionFunction } from '@/utils/types';
+import { type actionFunction } from '@/types';
 
 type ImageContainerProps = {
   image: string;

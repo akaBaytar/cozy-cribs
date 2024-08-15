@@ -6,7 +6,7 @@ import PropertyRating from './PropertyRating';
 import FavoriteButton from './FavoriteButton';
 
 import { formatCurrency } from '@/helpers/formatCurrency';
-import { PropertyCard as PropTypes } from '@/utils/types';
+import { PropertyCard as PropTypes } from '@/types';
 
 const PropertyCard = ({ property }: { property: PropTypes }) => {
   const { name, image, price, country, id, tagline } = property;

@@ -3,8 +3,8 @@
 import { redirect } from 'next/navigation';
 import { clerkClient } from '@clerk/nextjs/server';
 
-import prisma from '@/utils/database';
-import { profileSchema } from '@/utils/schemas';
+import prisma from '@/database';
+import { profileSchema } from '@/schemas';
 import { getAuthUser } from '@/helpers/getAuthUser';
 import { renderError } from '@/helpers/renderError';
 import { validateFields } from '@/helpers/validateFields';

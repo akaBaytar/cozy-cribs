@@ -2,8 +2,8 @@
 
 import { revalidatePath } from 'next/cache';
 
-import prisma from '@/utils/database';
-import { imageSchema } from '@/utils/schemas';
+import prisma from '@/database';
+import { imageSchema } from '@/schemas';
 import { uploadImage } from '@/utils/supabase';
 import { getAuthUser } from '@/helpers/getAuthUser';
 import { validateFields } from '@/helpers/validateFields';

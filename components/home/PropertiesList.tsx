@@ -1,6 +1,6 @@
 import Card from '../card/PropertyCard';
 
-import type { PropertyCard } from '@/utils/types';
+import type { PropertyCard } from '@/types';
 
 const PropertiesList = ({ properties }: { properties: PropertyCard[] }) => {
   return (

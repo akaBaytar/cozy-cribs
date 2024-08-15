@@ -1,6 +1,6 @@
 'use server';
 
-import prisma from '@/utils/database';
+import prisma from '@/database';
 
 export const fetchPropertyRating = async (propertyId: string) => {
   const result = await prisma.review.groupBy({

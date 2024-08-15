@@ -2,7 +2,7 @@
 
 import { revalidatePath } from 'next/cache';
 
-import prisma from '@/utils/database';
+import prisma from '@/database';
 import { getAuthUser } from '@/helpers/getAuthUser';
 import { renderError } from '@/helpers/renderError';
 

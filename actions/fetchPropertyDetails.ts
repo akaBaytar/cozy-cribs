@@ -1,6 +1,6 @@
 'use server';
 
-import prisma from '@/utils/database';
+import prisma from '@/database';
 
 export const fetchPropertyDetails = (id: string) => {
   return prisma.property.findUnique({
