@@ -32,7 +32,7 @@ export const createBooking = async (prevState: StateProps) => {
   });
 
   try {
-    const booking = await prisma.booking.create({
+    await prisma.booking.create({
       data: {
         checkIn,
         checkOut,
