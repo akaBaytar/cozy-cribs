@@ -13,6 +13,8 @@ type StateProps = { propertyId: string; checkIn: Date; checkOut: Date };
 export const createBooking = async (prevState: StateProps) => {
   const user = await getAuthUser();
 
+  let bookingId: null | string = null;
+
   if (!user) throw new Error('You must log in first to make a reservation.');
   if (!user.privateMetadata.hasProfile) redirect('/profile/create');
 
@@ -32,7 +34,7 @@ export const createBooking = async (prevState: StateProps) => {
   });
 
   try {
-    await prisma.booking.create({
+    const booking = await prisma.booking.create({
       data: {
         checkIn,
         checkOut,
@@ -42,9 +44,11 @@ export const createBooking = async (prevState: StateProps) => {
         profileId: user.id,
       },
     });
+
+    bookingId = booking.id;
   } catch (error) {
     renderError(error);
   }
 
-  redirect('/bookings');
+  redirect(`/checkout?bookingId=${bookingId}`);
 };
