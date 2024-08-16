@@ -14,8 +14,8 @@ import { SubmitButton } from '@/components/form/Buttons';
 import { type Amenity } from '@/utils/amenities';
 
 import { fetchRentalDetails } from '@/actions/fetchRentalDetails';
-import { updateProperty } from '@/actions/updateProperty';
-import { updatePropertyImage } from '@/actions/updatePropertyImage';
+import { updateRental } from '@/actions/updateRental';
+import { updateRentalImage } from '@/actions/updateRentalImage';
 
 const RentalDetails = async ({ params }: { params: { id: string } }) => {
   const property = await fetchRentalDetails(params.id);
@@ -34,10 +34,10 @@ const RentalDetails = async ({ params }: { params: { id: string } }) => {
           text='Update Image'
           className='w-full sm:h-[300px] md:h-[400px] object-cover rounded-md'
           buttonClassName='w-full my-4'
-          action={updatePropertyImage}>
+          action={updateRentalImage}>
           <input type='hidden' name='id' value={property.id} />
         </ImageContainer>
-        <FormContainer action={updateProperty}>
+        <FormContainer action={updateRental}>
           <input type='hidden' name='id' value={property.id} />
           <FormInput
             name='name'
