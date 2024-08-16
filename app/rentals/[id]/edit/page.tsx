@@ -22,6 +22,8 @@ const RentalDetails = async ({ params }: { params: { id: string } }) => {
 
   if (!property) redirect('/');
 
+  const propertyAmenities: Amenity[] = JSON.parse(property.amenities);
+
   return (
     <section>
       <h1 className='text-2xl font-semibold mb-4'>Edit Property Details</h1>
@@ -66,6 +68,10 @@ const RentalDetails = async ({ params }: { params: { id: string } }) => {
           <CounterInput detail='bedrooms' defaultValue={property.bedrooms} />
           <CounterInput detail='beds' defaultValue={property.beds} />
           <CounterInput detail='baths' defaultValue={property.baths} />
+          <h3 className='text-lg mt-8 mb-4 font-medium'>
+            Accommodation Details
+          </h3>
+          <AmenitiesInput defaultValue={propertyAmenities} />
           <SubmitButton text='Edit Property Details' className='mt-8 w-full' />
         </FormContainer>
       </div>
