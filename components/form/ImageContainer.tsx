@@ -18,10 +18,12 @@ type ImageContainerProps = {
   text: string;
   action: actionFunction;
   children?: React.ReactNode;
+  className?: string;
+  buttonClassName?:string
 };
 
 const ImageContainer = (props: ImageContainerProps) => {
-  const { image, name, text, action } = props;
+  const { image, name, text, className,buttonClassName, action } = props;
 
   const [isUpdateFormVisible, setUpdateFromVisible] = useState(false);
 
@@ -33,7 +35,7 @@ const ImageContainer = (props: ImageContainerProps) => {
           alt={name}
           width={600}
           height={600}
-          className='rounded object-cover mb-[12px] mt-[6px] w-full sm:h-[238px] sm:w-[238px]'
+          className={className}
         />
       ) : (
         <LuUser2 className='w-24 h-24 bg-primary rounded text-white mb-4' />
@@ -41,7 +43,7 @@ const ImageContainer = (props: ImageContainerProps) => {
       <Button
         variant='outline'
         size='lg'
-        className='w-full sm:w-[240px] mb-6 sm:mb-0 mt-4'
+        className={buttonClassName}
         onClick={() => setUpdateFromVisible(!isUpdateFormVisible)}>
         {text}
       </Button>
