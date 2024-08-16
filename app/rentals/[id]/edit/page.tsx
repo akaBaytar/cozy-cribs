@@ -32,8 +32,10 @@ const RentalDetails = async ({ params }: { params: { id: string } }) => {
           name={property.name}
           image={property.image}
           text='Update Image'
-          className='w-full sm:h-[300px] md:h-[400px] object-cover rounded-md'
+          imageClassName='w-full sm:h-[300px] md:h-[400px] object-cover rounded-md'
           buttonClassName='w-full my-4'
+          imageInputClassName='w-full h-10 leading-loose cursor-pointer'
+          submitButtonClassName='w-full mb-4'
           action={updateRentalImage}>
           <input type='hidden' name='id' value={property.id} />
         </ImageContainer>

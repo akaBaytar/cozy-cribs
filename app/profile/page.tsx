@@ -19,8 +19,10 @@ const Profile = async () => {
           image={profile.profileImage}
           name={profile.clerkId}
           text='Update Avatar'
-          className='rounded object-cover mb-[12px] mt-[6px] w-full sm:h-[238px] sm:w-[238px]'
+          imageClassName='rounded object-cover mb-[12px] mt-[6px] w-full sm:h-[238px] sm:w-[238px]'
           buttonClassName='w-full sm:w-[240px] mb-6 sm:mb-0 mt-4'
+          imageInputClassName='w-full sm:w-[240px] mt-2 cursor-pointer'
+          submitButtonClassName='mb-8 w-full sm:w-[240px]'
           action={updateAvatar}
         />
         <FormContainer action={updateProfile}>

@@ -18,12 +18,21 @@ type ImageContainerProps = {
   text: string;
   action: actionFunction;
   children?: React.ReactNode;
-  className?: string;
-  buttonClassName?:string
+  imageClassName?: string;
+  buttonClassName?: string;
+  imageInputClassName?: string;
+  submitButtonClassName?: string;
 };
 
 const ImageContainer = (props: ImageContainerProps) => {
-  const { image, name, text, className,buttonClassName, action } = props;
+  const { image, name, text, action } = props;
+
+  const {
+    imageClassName,
+    buttonClassName,
+    imageInputClassName,
+    submitButtonClassName,
+  } = props;
 
   const [isUpdateFormVisible, setUpdateFromVisible] = useState(false);
 
@@ -35,7 +44,7 @@ const ImageContainer = (props: ImageContainerProps) => {
           alt={name}
           width={600}
           height={600}
-          className={className}
+          className={imageClassName}
         />
       ) : (
         <LuUser2 className='w-24 h-24 bg-primary rounded text-white mb-4' />
@@ -48,11 +57,11 @@ const ImageContainer = (props: ImageContainerProps) => {
         {text}
       </Button>
       {isUpdateFormVisible && (
-        <div className='max-w-lg sm:mt-4'>
+        <div className='sm:mt-4'>
           <FormContainer action={action}>
             {props.children}
-            <ImageInput className='w-full sm:w-[240px] mt-2 cursor-pointer' />
-            <SubmitButton size='lg' className='mb-8 w-full sm:w-[240px]' />
+            <ImageInput className={imageInputClassName} />
+            <SubmitButton size='lg' className={submitButtonClassName} />
           </FormContainer>
         </div>
       )}
