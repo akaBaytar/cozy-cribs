@@ -21,11 +21,11 @@ const SubmitReview = ({ id }: { id: string }) => {
       <Button
         size='lg'
         onClick={() => setVisible(!isVisible)}
-        className='w-full lg:w-8/12'>
+        className='w-full lg:w-7/12'>
         Leave a Review
       </Button>
       {isVisible && (
-        <Card className='p-4 mt-8 lg:w-8/12'>
+        <Card className='p-4 mt-8 lg:w-7/12'>
           <FormContainer action={createReview}>
             <input type='hidden' name='propertyId' value={id} />
             <RatingInput name='rating' label='Your Rating' key={nanoid()} />
