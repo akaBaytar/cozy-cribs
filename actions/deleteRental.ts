@@ -25,6 +25,6 @@ export const deleteRental = async (prevState: { propertyId: string }) => {
 
     return { message: 'Rental deleted successfully.' };
   } catch (error) {
-    renderError(error);
+    return renderError(error);
   }
 };
