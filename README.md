@@ -58,11 +58,12 @@
 - Sign up and create a new store at [Stripe](https://dashboard.stripe.com/register)
 
 #### `.env` File
+Note: Clerk's free tier doesn't allow us to directly access the user role. If you're using the paid version, you can directly access the admin role or like me, you can add your own ID to the environment variables for verification.
 
 Create `.env` file and fill in the following environment variables:
 
 ```
-ADMIN_USER_ID=[INSTEAD OF THE ROLE (FOR CLERK FREE TIER)]
+ADMIN_USER_ID=[INSTEAD OF THE ROLE]
 NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=[YOUR PUBLISHABLE KEY]
 CLERK_SECRET_KEY=[YOUR SECRET KEY]
 DATABASE_URL=[YOUR DATABASE URL]
