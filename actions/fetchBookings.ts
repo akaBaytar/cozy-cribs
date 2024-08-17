@@ -9,6 +9,7 @@ export const fetchBookings = async () => {
   const bookings = await prisma.booking.findMany({
     where: {
       profileId: user?.id,
+      paymentStatus: true,
     },
     include: {
       property: {

@@ -11,6 +11,7 @@ export const fetchReservations = async () => {
       property: {
         profileId: user?.id,
       },
+      paymentStatus: true,
     },
     orderBy: {
       createdAt: 'desc',

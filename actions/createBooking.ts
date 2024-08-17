@@ -13,10 +13,17 @@ type StateProps = { propertyId: string; checkIn: Date; checkOut: Date };
 export const createBooking = async (prevState: StateProps) => {
   const user = await getAuthUser();
 
-  let bookingId: null | string = null;
-
   if (!user) throw new Error('You must log in first to make a reservation.');
   if (!user.privateMetadata.hasProfile) redirect('/profile/create');
+
+  await prisma.booking.deleteMany({
+    where: {
+      profileId: user.id,
+      paymentStatus: false,
+    },
+  });
+
+  let bookingId: null | string = null;
 
   const { checkIn, checkOut, propertyId } = prevState;
 
